@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
             primaryColor: Color.fromARGB(255, 173, 173, 171)),
         home: Scaffold(
             appBar: AppBar(
-              title: const Text('Get Started'),
+              title: const Text('Login Page'),
             ),
             body: Stack(
               children: [
@@ -86,7 +86,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     _buildLogo(context),
                     _buildText(context),
-                    _buildGetStartedButton(),
+                    _buildLoginButton(),
+                    _buildCreateAccountButton(),
                   ],
                   )
                 ),
@@ -123,19 +124,22 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget _buildText(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    
     return Container(
-      margin: EdgeInsets.only(top: 150.0),
+      
+      margin: EdgeInsets.only(top: 60.0),
       padding: const EdgeInsets.all(32),
       child: Text(
-        'CONNECTING FARMS TO YOU',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         style: TextStyle(
-            fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
+            fontSize: 15,  color: Colors.black),
+            textAlign: TextAlign.center,
       ),
     );
   }
 
   @override
-  Widget _buildGetStartedButton() {
+  Widget _buildLoginButton() {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 40),
       padding: EdgeInsets.symmetric(vertical: 25.0),
@@ -151,9 +155,38 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         child: Text(
-          'Get Started',
+          'Login',
           style: const TextStyle(
             color: Color.fromARGB(255, 255, 255, 255),
+            letterSpacing: 1.5,
+            fontSize: 18.0,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'OpenSans',
+          ),
+        ),
+      ),
+    );
+  }
+  @override
+  Widget _buildCreateAccountButton() {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 40),
+      padding: EdgeInsets.symmetric(vertical: 25.0),
+      width: double.infinity,
+      child: ElevatedButton(
+        onPressed: () => print('method not implemented yet'),
+        style: ElevatedButton.styleFrom(
+          primary: Color.fromARGB(255, 255, 255, 255),
+          onPrimary: Color.fromARGB(255, 136, 201, 245),
+          padding: EdgeInsets.all(15.0),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
+        ),
+        child: Text(
+          'Create an Account',
+          style: const TextStyle(
+            color:Colors.black,
             letterSpacing: 1.5,
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
