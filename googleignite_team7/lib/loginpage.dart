@@ -102,21 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 100),
+          margin: const EdgeInsets.only(top: 30),
           child: Image.asset(
-            'assets/images/logo.jpg',
-            height: 100,
-            width: 100,
+            'assets/images/logo.png',
+            height: 250,
+            width: 250,
           ),
         ),
-        Container(
-          margin: const EdgeInsets.only(top: 10),
-          child: Text(
-            'FarmFinds',
-            style: TextStyle(
-                fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
-          ),
-        ),
+        
       ],
     );
   }
@@ -127,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
     
     return Container(
       
-      margin: EdgeInsets.only(top: 60.0),
+      margin: EdgeInsets.only(top: 40.0),
       padding: const EdgeInsets.all(32),
       child: Text(
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
