@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
-class Login extends StatelessWidget {
+class ForgotPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +66,7 @@ class MyForm extends StatefulWidget {
 class _MyFormState extends State<MyForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool passwordVisible = false;
-  String _username = '';
+  String _phoneNumber = '';
   String _password = '';
 
   @override
@@ -86,7 +86,8 @@ class _MyFormState extends State<MyForm> {
             child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Sign In",
+                  "Forgot Password",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 48.0,
@@ -99,7 +100,7 @@ class _MyFormState extends State<MyForm> {
             child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "Enter your account details",
+                  "Fill in to reset your password",
                   style: TextStyle(color: Colors.black),
                 )),
           ),
@@ -112,58 +113,12 @@ class _MyFormState extends State<MyForm> {
               return null;
             },
             onSaved: (value) {
-              _username = value!;
+              _phoneNumber = value!;
             },
           ),
-          TextFormField(
-            obscureText: passwordVisible,
-            enableSuggestions: false,
-            autocorrect: false,
-            decoration: InputDecoration(
-              labelText: 'Password',
-              suffixIcon: IconButton(
-                icon: Icon(
-                    passwordVisible ? Icons.visibility : Icons.visibility_off),
-                onPressed: () {
-                  setState(
-                    () {
-                      passwordVisible = !passwordVisible;
-                    },
-                  );
-                },
-              ),
-            ),
-            validator: (value) {
-              if (value!.isEmpty) {
-                return 'Please enter your Password';
-              }
-              return null;
-            },
-            onSaved: (value) {
-              _password = value!;
-            },
-          ),
-          Padding(
-              padding: EdgeInsets.only(top: 16.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/forgot_password');
-                  },
-                  child: const Text(
-                    'Forgot Password',
-                    style: TextStyle(
-                        color: Color.fromRGBO(
-                            173, 173, 173, 1), // Customize button text color
-                        decoration: TextDecoration.underline, // Add underline
-                        fontSize: 16.0),
-                  ),
-                ),
-              )),
           const Spacer(),
           MyFilledButton(
-              label: "Login",
+              label: "Get OTP",
               onPressed: () {
                 if (_formKey.currentState!.validate()) {
                   // If the form is valid, display a snackbar. In the real world,
@@ -171,35 +126,12 @@ class _MyFormState extends State<MyForm> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('Processing Data')),
                   );
-                  Navigator.pushNamed(context, '/buyer_landing');
+                  Navigator.pushNamed(context, '/login');
                 }
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
               fontColor: Colors.white),
-          Center(
-            child: Row(
-              children: [
-                const Text(
-                  'Need an account?',
-                  style: TextStyle(fontSize: 16.0),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/register');
-                  },
-                  child: const Text(
-                    'Create One',
-                    style: TextStyle(
-                        color: Color.fromRGBO(
-                            0, 107, 60, 1), // Customize button text color
-                        decoration: TextDecoration.underline, // Add underline
-                        fontSize: 16.0),
-                  ),
-                ),
-              ],
-            ),
-          )
         ],
       ),
     );

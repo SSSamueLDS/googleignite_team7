@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
@@ -5,8 +7,18 @@ import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 import '../screens/register_or_login.dart';
 import '../screens/buyer_or_seller.dart';
 import '../screens/login.dart';
+import '../screens/register.dart';
+import '../screens/forgot_password.dart';
+
+// Buyer Pages
+import '../screens/buyer_landing.dart';
+
+// Farmer Pages
 
 void main() {
+  final account = jsonEncode({'username': 'kohp', 'password': 'password'});
+  final decodedJson = jsonDecode(account);
+
   runApp(const MyApp());
 }
 
@@ -22,9 +34,12 @@ class MyApp extends StatelessWidget {
       initialRoute: '/', // Specify the initial route (root)
       routes: {
         '/': (context) => MainScreen(), // Define the home page route
-        '/register_or_login': (context) => RegisterOrLogin(), 
-        '/buyer_or_seller': (context) => BuyerOrSeller(), 
-        '/login': (context) => Login(), 
+        '/register_or_login': (context) => RegisterOrLogin(),
+        '/buyer_or_seller': (context) => BuyerOrSeller(),
+        '/login': (context) => Login(),
+        '/register': (context) => Register(),
+        '/forgot_password': (context) => ForgotPassword(),
+        '/buyer_landing': (context) => BuyerLanding(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
@@ -97,15 +112,14 @@ Widget _buildSecondContainer(BuildContext context) {
         Align(
             alignment: Alignment.bottomLeft,
             child: MyFilledButton(
-                label: "Get Started",
-                onPressed: () {
-                  Navigator.pushNamed(context, '/register_or_login');
-                },
-                fillColor: Colors.black,
-                borderColor: Colors.transparent,
-                fontColor: Colors.white,
-            )
-        ),
+              label: "Get Started",
+              onPressed: () {
+                Navigator.pushNamed(context, '/register_or_login');
+              },
+              fillColor: Colors.black,
+              borderColor: Colors.transparent,
+              fontColor: Colors.white,
+            )),
       ]),
     ),
   );
