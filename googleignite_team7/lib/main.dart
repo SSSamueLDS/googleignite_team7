@@ -9,6 +9,7 @@ import '../screens/buyer_or_seller.dart';
 import '../screens/login.dart';
 import '../screens/register.dart';
 import '../screens/forgot_password.dart';
+import '../screens/farmerlisting.dart';
 
 // Buyer Pages
 import '../screens/buyer_landing.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
         '/buyer_landing': (context) => BuyerLanding(),
+        '/farmerlisting' : (context) => Farmerlistingpage()
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
