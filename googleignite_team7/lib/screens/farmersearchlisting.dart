@@ -78,12 +78,14 @@ class Farmersearchlisting extends StatelessWidget {
                               Positioned(
                                 top: 0,
                                 left: 0,
-                                child: Image.asset('assets/images/searchbutton.png'),
+                                child: Image.asset(
+                                    'assets/images/searchbutton.png'),
                               ),
                               Positioned(
                                 top: 0,
                                 left: 0,
-                                child: Image.asset('assets/images/searchbutton.png'),
+                                child: Image.asset(
+                                    'assets/images/searchbutton.png'),
                               ),
                             ]))),
                   ]))),
@@ -329,16 +331,14 @@ class Farmersearchlisting extends StatelessWidget {
                             ]))),
                   ]))),
           Positioned(
-              top: 91,
-              left: 40,
-              
-            
-                child: Image.asset(
-                  'assets/images/findmepls.png',
-                ),
-              ),
+            top: 91,
+            left: 40,
+            child: Image.asset(
+              'assets/images/findmepls.png',
+            ),
+          ),
           Positioned(
-              top: 207,
+              top: 245,
               left: 36,
               child: Text(
                 'Recent Searches',
@@ -353,7 +353,7 @@ class Farmersearchlisting extends StatelessWidget {
                     height: 1),
               )),
           Positioned(
-              top: 251,
+              top: 280,
               left: 79,
               child: Text(
                 'Purple Sugarcane',
@@ -369,68 +369,7 @@ class Farmersearchlisting extends StatelessWidget {
                     height: 1),
               )),
           Positioned(
-              top: 244,
-              left: 36,
-              child: Container(
-                  width: 30,
-                  height: 30,
-                  child: Stack(children: <Widget>[
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: Image.asset(
-                        'assets/images/recent.png',
-                      ),
-                    ),
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: Image.asset(
-                        'assets/images/recent.png',
-                      ),
-                    ),
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: Image.asset(
-                        'assets/images/recent.png',
-                      ),
-                    ),
-                  ]))),
-          Positioned(
-              top: 285,
-              left: 79,
-              child: Text(
-                'Green Sugarcane',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Color.fromRGBO(173, 173, 173, 1),
-                    fontFamily: 'DM Sans',
-                    fontSize: 14,
-                    letterSpacing:
-                        0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    decoration: TextDecoration.none,
-                    height: 1),
-              )),
-          Positioned(
-              top: 320,
-              left: 79,
-              child: Text(
-                'Green Beans',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    color: Color.fromRGBO(173, 173, 173, 1),
-                    fontFamily: 'DM Sans',
-                    fontSize: 14,
-                    decoration: TextDecoration.none,
-                    letterSpacing:
-                        0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
-                    height: 1),
-              )),
-          Positioned(
-              top: 278,
+              top: 275,
               left: 36,
               child: Container(
                   width: 30,
@@ -460,6 +399,67 @@ class Farmersearchlisting extends StatelessWidget {
                   ]))),
           Positioned(
               top: 313,
+              left: 79,
+              child: Text(
+                'Green Sugarcane',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Color.fromRGBO(173, 173, 173, 1),
+                    fontFamily: 'DM Sans',
+                    fontSize: 14,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    decoration: TextDecoration.none,
+                    height: 1),
+              )),
+          Positioned(
+              top: 343,
+              left: 79,
+              child: Text(
+                'Green Beans',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Color.fromRGBO(173, 173, 173, 1),
+                    fontFamily: 'DM Sans',
+                    fontSize: 14,
+                    decoration: TextDecoration.none,
+                    letterSpacing:
+                        0 /*percentages not used in flutter. defaulting to zero*/,
+                    fontWeight: FontWeight.normal,
+                    height: 1),
+              )),
+          Positioned(
+              top: 305,
+              left: 36,
+              child: Container(
+                  width: 30,
+                  height: 30,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/recent.png',
+                      ),
+                    ),
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/recent.png',
+                      ),
+                    ),
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/recent.png',
+                      ),
+                    ),
+                  ]))),
+          Positioned(
+              top: 337,
               left: 36,
               child: Container(
                   width: 30,
@@ -487,7 +487,7 @@ class Farmersearchlisting extends StatelessWidget {
                     ),
                   ]))),
           Positioned(
-              top: 248,
+              top: 310,
               left: 380,
               child: Container(
                   width: 30,
@@ -509,7 +509,7 @@ class Farmersearchlisting extends StatelessWidget {
                     ),
                   ]))),
           Positioned(
-              top: 281,
+              top: 279,
               left: 380,
               child: Container(
                   width: 30,
@@ -531,7 +531,7 @@ class Farmersearchlisting extends StatelessWidget {
                     ),
                   ]))),
           Positioned(
-              top: 320,
+              top: 346,
               left: 380,
               child: Container(
                   width: 30,
@@ -555,4 +555,3 @@ class Farmersearchlisting extends StatelessWidget {
         ]));
   }
 }
-
