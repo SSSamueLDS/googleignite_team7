@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 class Farmerlistingpage extends StatelessWidget {
   @override
@@ -69,6 +70,7 @@ class Farmerlistingpage extends StatelessWidget {
                               color: Color.fromRGBO(173, 173, 173, 1),
                               fontFamily: 'DM Sans',
                               fontSize: 14,
+                              decoration: TextDecoration.none,
                               letterSpacing:
                                   0 /*percentages not used in flutter. defaulting to zero*/,
                               fontWeight: FontWeight.normal,
@@ -195,6 +197,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 107, 60, 1),
                                         fontFamily: 'DM Sans',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -244,6 +247,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 107, 60, 1),
                                         fontFamily: 'DM Sans',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -293,6 +297,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 107, 60, 1),
                                         fontFamily: 'DM Sans',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -348,6 +353,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 107, 60, 1),
                                         fontFamily: 'DM Sans',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -404,6 +410,7 @@ class Farmerlistingpage extends StatelessWidget {
                               color: Color.fromRGBO(0, 0, 0, 1),
                               fontFamily: 'DM Sans',
                               fontSize: 14,
+                              decoration: TextDecoration.none,
                               letterSpacing:
                                   0 /*percentages not used in flutter. defaulting to zero*/,
                               fontWeight: FontWeight.normal,
@@ -455,6 +462,7 @@ class Farmerlistingpage extends StatelessWidget {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
+                                                  decoration: TextDecoration.none,
                                                   fontSize: 12,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
@@ -518,6 +526,7 @@ class Farmerlistingpage extends StatelessWidget {
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
                                                   fontSize: 12,
+                                                  decoration: TextDecoration.none,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
                                                   fontWeight: FontWeight.normal,
@@ -574,6 +583,7 @@ class Farmerlistingpage extends StatelessWidget {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
+                                                  decoration: TextDecoration.none,
                                                   fontSize: 12,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
@@ -632,6 +642,7 @@ class Farmerlistingpage extends StatelessWidget {
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
                                                   fontSize: 12,
+                                                  decoration: TextDecoration.none,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
                                                   fontWeight: FontWeight.normal,
@@ -662,6 +673,7 @@ class Farmerlistingpage extends StatelessWidget {
                     color: Color.fromRGBO(0, 0, 0, 1),
                     fontFamily: 'DM Sans',
                     fontSize: 14,
+                    decoration: TextDecoration.none,
                     letterSpacing:
                         0 /*percentages not used in flutter. defaulting to zero*/,
                     fontWeight: FontWeight.normal,
@@ -700,6 +712,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -715,6 +728,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -757,6 +771,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -772,6 +787,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -815,6 +831,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -830,6 +847,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -873,6 +891,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -888,6 +907,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -931,6 +951,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -946,6 +967,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -989,6 +1011,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -1004,6 +1027,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -1047,6 +1071,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -1062,6 +1087,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -1093,7 +1119,9 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(0, 0, 0, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 16,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
+                                      
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
                                         height: 1),
@@ -1108,6 +1136,7 @@ class Farmerlistingpage extends StatelessWidget {
                                         color: Color.fromRGBO(151, 152, 159, 1),
                                         fontFamily: 'Poppins',
                                         fontSize: 14,
+                                        decoration: TextDecoration.none,
                                         letterSpacing:
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
@@ -1118,3 +1147,4 @@ class Farmerlistingpage extends StatelessWidget {
         ]));
   }
 }
+

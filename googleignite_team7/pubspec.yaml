@@ -84,6 +84,8 @@ flutter:
     - assets/images/searchbutton.png
     - assets/images/cross.png
     - assets/images/Account.jpg
+    - assets/images/recent.png
+    - assets/images/x.png
 
 
 

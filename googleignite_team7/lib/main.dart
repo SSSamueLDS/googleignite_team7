@@ -9,12 +9,14 @@ import '../screens/buyer_or_seller.dart';
 import '../screens/login.dart';
 import '../screens/register.dart';
 import '../screens/forgot_password.dart';
-import '../screens/farmerlisting.dart';
+
 
 // Buyer Pages
 import '../screens/buyer_landing.dart';
 
 // Farmer Pages
+import '../screens/farmerlisting.dart';
+import '../screens/farmersearchlisting.dart';
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -41,7 +43,8 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
         '/buyer_landing': (context) => BuyerLanding(),
-        '/farmerlisting' : (context) => Farmerlistingpage()
+        '/farmerlisting' : (context) => Farmerlistingpage(),
+        '/farmersearchlisting' : (context) => Farmersearchlisting(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
