@@ -53,8 +53,8 @@ class Farmersearchlisting extends StatelessWidget {
                               color: Color.fromRGBO(255, 255, 255, 1),
                             ))),
                     Positioned(
-                        top: 11,
-                        left: 51.079891204833984,
+                        top: 15,
+                        left: 50,
                         child: Text(
                           'Search for your Listings',
                           textAlign: TextAlign.left,
@@ -72,8 +72,8 @@ class Farmersearchlisting extends StatelessWidget {
                         top: 11,
                         left: 13.366392135620117,
                         child: Container(
-                            width: 19.280784606933594,
-                            height: 18.916013717651367,
+                            width: 25,
+                            height: 25,
                             child: Stack(children: <Widget>[
                               Positioned(
                                 top: 0,
@@ -141,14 +141,14 @@ class Farmersearchlisting extends StatelessWidget {
                                       child: Stack(children: <Widget>[
                                         Positioned(
                                           top: 0,
-                                          left: 8.0,
+                                          left: 0,
                                           child: Image.asset(
                                             'assets/images/Account.jpg',
                                           ),
                                         ),
                                         Positioned(
-                                          top: 22.425003051757812,
-                                          left: 14.6249895095825,
+                                          top: 02,
+                                          left: 0,
                                           child: Image.asset(
                                             'assets/images/Account.jpg',
                                           ),
@@ -216,7 +216,7 @@ class Farmersearchlisting extends StatelessWidget {
                             height: 59,
                             child: Stack(children: <Widget>[
                               Positioned(
-                                  top: 41,
+                                  top: 4,
                                   left: 0,
                                   child: Text(
                                     'Listing',
@@ -330,13 +330,13 @@ class Farmersearchlisting extends StatelessWidget {
                   ]))),
           Positioned(
               top: 91,
-              left: 46,
-              child: Transform.rotate(
-                angle: -90 * (math.pi / 180),
+              left: 40,
+              
+            
                 child: Image.asset(
-                  'assets/images/x.png',
+                  'assets/images/findmepls.png',
                 ),
-              )),
+              ),
           Positioned(
               top: 207,
               left: 36,
@@ -349,11 +349,11 @@ class Farmersearchlisting extends StatelessWidget {
                     fontSize: 14,
                     letterSpacing:
                         0 /*percentages not used in flutter. defaulting to zero*/,
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.bold,
                     height: 1),
               )),
           Positioned(
-              top: 245,
+              top: 251,
               left: 79,
               child: Text(
                 'Purple Sugarcane',
@@ -362,6 +362,7 @@ class Farmersearchlisting extends StatelessWidget {
                     color: Color.fromRGBO(173, 173, 173, 1),
                     fontFamily: 'DM Sans',
                     fontSize: 14,
+                    decoration: TextDecoration.none,
                     letterSpacing:
                         0 /*percentages not used in flutter. defaulting to zero*/,
                     fontWeight: FontWeight.normal,
@@ -371,33 +372,33 @@ class Farmersearchlisting extends StatelessWidget {
               top: 244,
               left: 36,
               child: Container(
-                  width: 25,
-                  height: 21.3388614654541,
+                  width: 30,
+                  height: 30,
                   child: Stack(children: <Widget>[
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recentsearch.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                     Positioned(
-                      top: 4.5454487800598145,
-                      left: 4.5454487800598145,
+                      top: 0,
+                      left: 0,
                       child: Image.asset(
                         'assets/images/recent.png',
                       ),
                     ),
                     Positioned(
-                      top: 7.954559803009033,
-                      left: 12.499996185302734,
+                      top: 0,
+                      left: 0,
                       child: Image.asset(
                         'assets/images/recent.png',
                       ),
                     ),
                   ]))),
           Positioned(
-              top: 279,
+              top: 285,
               left: 79,
               child: Text(
                 'Green Sugarcane',
@@ -409,10 +410,11 @@ class Farmersearchlisting extends StatelessWidget {
                     letterSpacing:
                         0 /*percentages not used in flutter. defaulting to zero*/,
                     fontWeight: FontWeight.normal,
+                    decoration: TextDecoration.none,
                     height: 1),
               )),
           Positioned(
-              top: 314,
+              top: 320,
               left: 79,
               child: Text(
                 'Green Beans',
@@ -421,6 +423,7 @@ class Farmersearchlisting extends StatelessWidget {
                     color: Color.fromRGBO(173, 173, 173, 1),
                     fontFamily: 'DM Sans',
                     fontSize: 14,
+                    decoration: TextDecoration.none,
                     letterSpacing:
                         0 /*percentages not used in flutter. defaulting to zero*/,
                     fontWeight: FontWeight.normal,
@@ -430,28 +433,28 @@ class Farmersearchlisting extends StatelessWidget {
               top: 278,
               left: 36,
               child: Container(
-                  width: 25,
-                  height: 21.3388614654541,
+                  width: 30,
+                  height: 30,
                   child: Stack(children: <Widget>[
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                     Positioned(
-                      top: 4.5454487800598145,
-                      left: 4.5454487800598145,
+                      top: 0,
+                      left: 0,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                     Positioned(
-                      top: 7.954559803009033,
-                      left: 12.499996185302734,
+                      top: 0,
+                      left: 0,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                   ]))),
@@ -459,59 +462,36 @@ class Farmersearchlisting extends StatelessWidget {
               top: 313,
               left: 36,
               child: Container(
-                  width: 25,
-                  height: 21.3388614654541,
+                  width: 30,
+                  height: 30,
                   child: Stack(children: <Widget>[
+                    Positioned(
+                      top: 0,
+                      child: Image.asset(
+                        'assets/images/recent.png',
+                      ),
+                    ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                     Positioned(
-                      top: 4.5454487800598145,
-                      left: 4.5454487800598145,
+                      top: 0,
+                      left: 0,
                       child: Image.asset(
-                        'assets/images/x.png',
-                      ),
-                    ),
-                    Positioned(
-                      top: 7.954559803009033,
-                      left: 12.499996185302734,
-                      child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                   ]))),
           Positioned(
-              top: 245,
-              left: 387,
+              top: 248,
+              left: 380,
               child: Container(
-                  width: 15,
-                  height: 15,
-                  child: Stack(children: <Widget>[
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: Image.asset(
-                        'assets/images/x.png',
-                      ),
-                    ),
-                    Positioned(
-                      top: 0,
-                      left: 0,
-                      child: Image.asset(
-                        'assets/images/x.png',
-                      ),
-                    ),
-                  ]))),
-          Positioned(
-              top: 279,
-              left: 387,
-              child: Container(
-                  width: 15,
-                  height: 15,
+                  width: 30,
+                  height: 30,
                   child: Stack(children: <Widget>[
                     Positioned(
                       top: 0,
@@ -529,11 +509,33 @@ class Farmersearchlisting extends StatelessWidget {
                     ),
                   ]))),
           Positioned(
-              top: 314,
-              left: 387,
+              top: 281,
+              left: 380,
               child: Container(
-                  width: 15,
-                  height: 15,
+                  width: 30,
+                  height: 30,
+                  child: Stack(children: <Widget>[
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/x.png',
+                      ),
+                    ),
+                    Positioned(
+                      top: 0,
+                      left: 0,
+                      child: Image.asset(
+                        'assets/images/x.png',
+                      ),
+                    ),
+                  ]))),
+          Positioned(
+              top: 320,
+              left: 380,
+              child: Container(
+                  width: 30,
+                  height: 30,
                   child: Stack(children: <Widget>[
                     Positioned(
                       top: 0,
@@ -554,16 +556,3 @@ class Farmersearchlisting extends StatelessWidget {
   }
 }
 
-@override
-Widget _buildSecondContainer(BuildContext context) {
-  return Expanded(
-      child: MyFilledButton(
-    label: "Search for your listings",
-    onPressed: () {
-      Navigator.pushNamed(context, '/farmersearchlisting');
-    },
-    fillColor: Colors.black,
-    borderColor: Colors.transparent,
-    fontColor: Colors.white,
-  ));
-}

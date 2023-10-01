@@ -19,7 +19,7 @@ class AnotherButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 293,
+      width: 250,
       child: ElevatedButton(
         style: ButtonStyle(
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
