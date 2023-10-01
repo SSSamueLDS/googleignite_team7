@@ -49,54 +49,50 @@ Widget _buildSecondContainer(BuildContext context) {
     child: Padding(
       padding: const EdgeInsets.only(
           top: 32.0, left: 32.0, right: 32.0, bottom: 56.0),
-      child: Column(
-        children: [
-          const Align(
-            alignment: Alignment.bottomLeft,
+      child: Column(children: [
+        const Align(
+          alignment: Alignment.bottomLeft,
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 16.0),
             child: Padding(
               padding: EdgeInsets.only(bottom: 16.0),
-              child: Padding(
-                padding: EdgeInsets.only(bottom: 16.0),
-                child: Center(
-                  child: Text(
-                    "Are you a...",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 28.0,
-                    ),
+              child: Center(
+                child: Text(
+                  "Are you a...",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 28.0,
                   ),
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
-            child: 
-              Align(
-                child: MyFilledButton(
-                  label: "Buyer",
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/'); // Need to update route
-                  },
-                  fillColor: Colors.black,
-                  borderColor: Colors.transparent,
-                  fontColor: Colors.white,
-                )
-              ),
-          ),
-          Align(
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 16.0),
+          child: Align(
+              child: MyFilledButton(
+            label: "Buyer",
+            onPressed: () {
+              Navigator.pushNamed(context, '/'); // Need to update route
+            },
+            fillColor: Colors.black,
+            borderColor: Colors.transparent,
+            fontColor: Colors.white,
+          )),
+        ),
+        Align(
             child: MyFilledButton(
-              label: "Farmer",
-              onPressed: () {
-                Navigator.pushNamed(context, '/'); // Need to update route
-              },
-              fillColor: Colors.white,
-              borderColor: Colors.black,
-              fontColor: Colors.black,
-            )
-          ),
-        ]
-      ),
+          label: "Farmer",
+          onPressed: () {
+            Navigator.pushNamed(
+                context, '/farmerlisting'); // Need to update route
+          },
+          fillColor: Colors.white,
+          borderColor: Colors.black,
+          fontColor: Colors.black,
+        )),
+      ]),
     ),
   );
 }
