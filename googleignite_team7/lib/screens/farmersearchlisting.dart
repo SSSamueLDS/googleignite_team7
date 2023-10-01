@@ -78,12 +78,12 @@ class Farmersearchlisting extends StatelessWidget {
                               Positioned(
                                 top: 0,
                                 left: 0,
-                                child: Image.asset('assets/images/recent.png'),
+                                child: Image.asset('assets/images/searchbutton.png'),
                               ),
                               Positioned(
-                                top: 14.6593017578125,
-                                left: 14.941969871520996,
-                                child: Image.asset('assets/images/recent.png'),
+                                top: 0,
+                                left: 0,
+                                child: Image.asset('assets/images/searchbutton.png'),
                               ),
                             ]))),
                   ]))),
@@ -150,7 +150,7 @@ class Farmersearchlisting extends StatelessWidget {
                                           top: 22.425003051757812,
                                           left: 14.6249895095825,
                                           child: Image.asset(
-                                            'assets/images/Account',
+                                            'assets/images/Account.jpg',
                                           ),
                                         ),
                                       ]))),
@@ -378,21 +378,21 @@ class Farmersearchlisting extends StatelessWidget {
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recentsearch.png',
                       ),
                     ),
                     Positioned(
                       top: 4.5454487800598145,
                       left: 4.5454487800598145,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                     Positioned(
                       top: 7.954559803009033,
                       left: 12.499996185302734,
                       child: Image.asset(
-                        'assets/images/x.png',
+                        'assets/images/recent.png',
                       ),
                     ),
                   ]))),

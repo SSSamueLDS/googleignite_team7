@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:googleignite_team7/widgets/MyFilledButton.dart';
+import 'package:googleignite_team7/widgets/AnotherButton.dart';
 
 class Farmerlistingpage extends StatelessWidget {
   @override
@@ -44,7 +44,7 @@ class Farmerlistingpage extends StatelessWidget {
                         left: 0,
                         child: Container(
                             width: 293,
-                            height: 40,
+                            height: 100,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(40),
@@ -54,28 +54,26 @@ class Farmerlistingpage extends StatelessWidget {
                               ),
                               boxShadow: [
                                 BoxShadow(
-                                    color: Color.fromRGBO(0, 0, 0, 0.25),
+                                    color: Colors.white,
                                     offset: Offset(0, 4),
                                     blurRadius: 4)
                               ],
                               color: Color.fromRGBO(255, 255, 255, 1),
                             ))),
                     Positioned(
-                        top: 14,
-                        left: 56,
-                        child: Text(
-                          'Search for your Listings',
-                          textAlign: TextAlign.left,
-                          style: TextStyle(
-                              color: Color.fromRGBO(173, 173, 173, 1),
-                              fontFamily: 'DM Sans',
-                              fontSize: 14,
-                              decoration: TextDecoration.none,
-                              letterSpacing:
-                                  0 /*percentages not used in flutter. defaulting to zero*/,
-                              fontWeight: FontWeight.normal,
-                              height: 1),
+                        top: 0,
+                        left: 0,
+                        child: Align(
+                          child: AnotherButton(
+                            label: 'Search for your Listings',
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/farmersearchlisting');
+                            },
+                            fillColor: Colors.white,
+                            borderColor: Colors.transparent,
+                            fontColor: Colors.white)
                         )),
+                                                
                     Positioned(
                         top: 11,
                         left: 19,
@@ -1145,6 +1143,7 @@ class Farmerlistingpage extends StatelessWidget {
                             ]))),
                   ]))),
         ]));
+        
+        
   }
 }
-
