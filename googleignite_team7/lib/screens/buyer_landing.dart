@@ -37,7 +37,7 @@ class BuyerLanding extends StatelessWidget {
                   child: Stack(
                 children: [
                   Expanded(
-                    child: BuyerExplore(),
+                    child: BuyerLand(),
                   )
                 ],
               ))
@@ -155,12 +155,12 @@ class _SearchResultsState extends State<SearchResults> {
   }
 }
 
-class BuyerExplore extends StatefulWidget {
+class BuyerLand extends StatefulWidget {
   @override
-  _BuyerExplore createState() => _BuyerExplore();
+  _BuyerLand createState() => _BuyerLand();
 }
 
-class _BuyerExplore extends State<BuyerExplore> {
+class _BuyerLand extends State<BuyerLand> {
   int _currentIndex = 0;
 
   @override

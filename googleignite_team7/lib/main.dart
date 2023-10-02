@@ -16,7 +16,7 @@ import '../screens/forgot_password.dart';
 import '../screens/buyer_landing.dart';
 import '../screens/buyer_account.dart';
 
-
+import '../screens/buyer_explore.dart';
 import '../screens/buyer_transaction_page.dart';
 
 // Farmer Pages

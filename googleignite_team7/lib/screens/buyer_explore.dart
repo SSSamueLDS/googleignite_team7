@@ -260,15 +260,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Fresh Fruit and Vegetables',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
@@ -293,15 +285,8 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Cooking Oil & Ghee',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
-                            ),
-                          ),
+                       
+                          
                         ],
                       ),
                     ),
@@ -326,15 +311,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Meat & Fish',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
@@ -359,15 +336,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Dairy & Eggs',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
-                            ),
-                          ),
+                         
                         ],
                       ),
                     ),
@@ -392,15 +361,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Bakery & Snacks',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
@@ -426,14 +387,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Beverages',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
-                            ),
-                          ),
+                        
                         ],
                       ),
                     ),
