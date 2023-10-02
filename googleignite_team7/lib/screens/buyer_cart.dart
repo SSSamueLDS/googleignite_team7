@@ -8,6 +8,7 @@ class BuyerCart extends StatefulWidget {
 
 class _BuyerCartState extends State<BuyerCart> {
   int _currentIndex = 2;
+
   List<String> items = [
     'Red Bell Pepper',
     'Eggs',
@@ -239,6 +240,23 @@ class _BuyerCartState extends State<BuyerCart> {
         setState(() {
           _currentIndex = index;
         });
+        // for changing of pages
+        switch (index) {
+          case 0:
+            Navigator.pushNamed(context, '/buyer_landing');
+            break;
+          case 1:
+            Navigator.pushNamed(context, '');
+            break;
+          case 2:
+            Navigator.pushNamed(context, '/buyer_cart');
+            break;
+          case 3:
+            break;
+          case 4:
+            Navigator.pushNamed(context, '/buyer_account');
+            break;
+        }
       },
       elevation: 8.0,
       selectedItemColor: Color.fromRGBO(0, 107, 60, 1),

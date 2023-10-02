@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
         '/404': (context) => UnderConstruction(),
         '/upload': (context) => UploadProduct(),
         '/buyer_cart': (context) => BuyerCart(),
-        '/404' : (context) => UnderConstruction(),
+        '/404': (context) => UnderConstruction(),
         '/farmer_account': (context) => FarmerAccount(),
         '/buyer_account': (context) => BuyerAccount(),
         '/productdetail': (context) => ProductDetail(),
@@ -142,7 +142,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/register_or_login');
+                Navigator.pushNamed(context, '/buyer_cart');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
