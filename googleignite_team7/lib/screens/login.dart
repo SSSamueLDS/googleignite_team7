@@ -66,7 +66,7 @@ class MyForm extends StatefulWidget {
 class _MyFormState extends State<MyForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool passwordVisible = false;
-  String _phonenumber = '';
+  String _email = '';
   String _password = '';
 
   @override
@@ -74,7 +74,18 @@ class _MyFormState extends State<MyForm> {
     super.initState();
     passwordVisible = true;
   }
-
+  @override
+  void fillPassword(String password) {
+    setState(() {
+      _password = password;
+    });
+  }
+  @override
+  void fillEmail(String email) {
+    setState(() {
+      _email = email;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -104,18 +115,20 @@ class _MyFormState extends State<MyForm> {
                 )),
           ),
           TextFormField(
-            decoration: const InputDecoration(labelText: 'Phone Number'),
+            onChanged: (value) => fillEmail(value),
+            decoration: const InputDecoration(labelText: 'Email'),
             validator: (value) {
               if (value!.isEmpty) {
-                return 'Please enter your Phone Number';
+                return 'Please enter your Email';
               }
               return null;
             },
             onSaved: (value) {
-              _phonenumber = value!;
+              _email = value!;
             },
           ),
           TextFormField(
+            onChanged: (value) => fillPassword(value),
             obscureText: passwordVisible,
             enableSuggestions: false,
             autocorrect: false,
@@ -168,7 +181,7 @@ class _MyFormState extends State<MyForm> {
                 if (_formKey.currentState!.validate()) {
                   // If the form is valid, display a snackbar. In the real world,
                   // you'd often call a server or save the information in a database.
-                  if (_phonenumber == "97663055" && _password == "password") {
+                  if (_email=="buyer@gmail.com" && _password == "buyer") {
                     Navigator.pushNamed(context, '/buyer_landing');
                   } else {
                     Navigator.pushNamed(context, '/farmerlisting');

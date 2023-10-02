@@ -42,7 +42,7 @@ class BuyerLanding extends StatelessWidget {
   Widget _buildSecondContainer(BuildContext context) {
     return Container(
       height: 100,
-      width: 600,
+      width: 100,
       child: 
       SingleChildScrollView(
         child: SearchResults(),
