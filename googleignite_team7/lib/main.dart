@@ -12,6 +12,7 @@ import '../screens/forgot_password.dart';
 
 // Buyer Pages
 import '../screens/buyer_landing.dart';
+import '../screens/payment_successful.dart';
 
 // Farmer Pages
 import '../screens/farmer_landing.dart';
@@ -50,8 +51,9 @@ class MyApp extends StatelessWidget {
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
-        '/404' : (context) => UnderConstruction(),
+        '/404': (context) => UnderConstruction(),
         '/upload': (context) => Upload(),
+        '/payment_successful': (context) => payment_successful(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
@@ -126,7 +128,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/register_or_login');
+                Navigator.pushNamed(context, '/registerorlogin');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
@@ -136,3 +138,4 @@ Widget _buildSecondContainer(BuildContext context) {
     ),
   );
 }
+
