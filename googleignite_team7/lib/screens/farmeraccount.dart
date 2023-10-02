@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:googleignite_team7/widgets/AnotherButton.dart';
 
-class FarmerAccount extends StatelessWidget {
+class FarmerAccountTest extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -58,6 +58,7 @@ class _FarmerLandingState extends State<FarmerLanding> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -66,16 +67,12 @@ class _FarmerLandingState extends State<FarmerLanding> {
         },
         elevation: 8.0, // Add elevation here
         selectedItemColor:
-          Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
+            Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
         unselectedItemColor: Colors.grey, // Set the unselected tab text color
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.view_module),
-            label: 'Listings',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.local_shipping),
