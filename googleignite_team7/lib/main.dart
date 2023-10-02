@@ -24,6 +24,7 @@ import '../screens/farmertypesearchlisting.dart';
 import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
 import "../screens/buyer_cart.dart";
+import "../screens/payment_successful.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -49,14 +50,14 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
-      
-        
+
         '/farmer_landing': (context) => FarmerLanding(),
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
-        '/404' : (context) => UnderConstruction(),
-       },
+        '/404': (context) => UnderConstruction(),
+        '/payment_successful':(context) => payment_successful()
+      },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
   }
@@ -140,4 +141,3 @@ Widget _buildSecondContainer(BuildContext context) {
     ),
   );
 }
-
