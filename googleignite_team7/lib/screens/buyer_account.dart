@@ -68,7 +68,7 @@ class _BuyerAccountState extends State<BuyerAccount> {
               Navigator.pushNamed(context, '/buyer_landing');
               break;
             case 1:
-              Navigator.pushNamed(context, '');
+              Navigator.pushNamed(context, 'buyer_explore');
               break;
             case 2:
               Navigator.pushNamed(context, '/buyer_cart');
