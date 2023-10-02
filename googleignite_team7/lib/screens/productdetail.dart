@@ -22,12 +22,12 @@ class ProductDetail extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    'assets/images/apple.png',
+                    'assets/images/redbellpepper.png',
                     height: 200,
                     width: 200,
                   ),
                   Text(
-                    'Natural Red Apple',
+                    'Red Bell Pepper',
                     style: TextStyle(
                       color: Color(0xFF181725),
                       fontSize: 24,
