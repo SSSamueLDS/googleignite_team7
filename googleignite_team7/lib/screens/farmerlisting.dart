@@ -64,16 +64,15 @@ class FarmerListingPage extends StatelessWidget {
                         top: 0,
                         left: 0,
                         child: Align(
-                          child: AnotherButton(
-                            label: 'Search for your Listings',
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/farmersearchlisting');
-                            },
-                            fillColor: Colors.white,
-                            borderColor: Colors.transparent,
-                            fontColor: Colors.white)
-                        )),
-                                                
+                            child: AnotherButton(
+                                label: 'Search for your Listings',
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, '/farmersearchlisting');
+                                },
+                                fillColor: Colors.white,
+                                borderColor: Colors.transparent,
+                                fontColor: Colors.white))),
                     Positioned(
                         top: 11,
                         left: 19,
@@ -460,7 +459,8 @@ class FarmerListingPage extends StatelessWidget {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
-                                                  decoration: TextDecoration.none,
+                                                  decoration:
+                                                      TextDecoration.none,
                                                   fontSize: 12,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
@@ -524,7 +524,8 @@ class FarmerListingPage extends StatelessWidget {
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
                                                   fontSize: 12,
-                                                  decoration: TextDecoration.none,
+                                                  decoration:
+                                                      TextDecoration.none,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
                                                   fontWeight: FontWeight.normal,
@@ -573,7 +574,7 @@ class FarmerListingPage extends StatelessWidget {
                                                 ))),
                                         Positioned(
                                             top: 73,
-                                            left:25,
+                                            left: 25,
                                             child: Text(
                                               'Pulses',
                                               textAlign: TextAlign.center,
@@ -581,7 +582,8 @@ class FarmerListingPage extends StatelessWidget {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
-                                                  decoration: TextDecoration.none,
+                                                  decoration:
+                                                      TextDecoration.none,
                                                   fontSize: 12,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
@@ -640,7 +642,8 @@ class FarmerListingPage extends StatelessWidget {
                                                       0, 0, 0, 1),
                                                   fontFamily: 'DM Sans',
                                                   fontSize: 12,
-                                                  decoration: TextDecoration.none,
+                                                  decoration:
+                                                      TextDecoration.none,
                                                   letterSpacing:
                                                       0 /*percentages not used in flutter. defaulting to zero*/,
                                                   fontWeight: FontWeight.normal,
@@ -1119,7 +1122,6 @@ class FarmerListingPage extends StatelessWidget {
                                         fontSize: 16,
                                         decoration: TextDecoration.none,
                                         letterSpacing:
-                                      
                                             0 /*percentages not used in flutter. defaulting to zero*/,
                                         fontWeight: FontWeight.normal,
                                         height: 1),
@@ -1143,7 +1145,5 @@ class FarmerListingPage extends StatelessWidget {
                             ]))),
                   ]))),
         ]));
-        
-        
   }
 }
