@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
         '/farmer_account': (context) => FarmerAccount(),
         '/buyer_account': (context) => BuyerAccount(),
         '/productdetail': (context) => ProductDetail(),
-        '/buyer_explore': (context) => BuyerExplore(),
+        // '/buyer_explore': (context) => BuyerExplore(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );

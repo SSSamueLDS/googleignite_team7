@@ -14,8 +14,8 @@ void main() {
     ),
   ));
 }
-class BuyerExploreBuild extends StatelessWidget {
 
+class BuyerExploreBuild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -162,7 +162,7 @@ class BuyerExplores extends StatefulWidget {
 }
 
 class _BuyerExplores extends State<BuyerExplores> {
-  int _currentIndex = 0;
+  int _currentIndex = 1;
 
   @override
   Widget build(BuildContext context) {
