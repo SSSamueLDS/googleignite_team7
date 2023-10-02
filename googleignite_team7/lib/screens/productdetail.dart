@@ -1,201 +1,151 @@
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Scaffold(
+      body: Column(
         children: [
-          Card(
-            elevation: 4,
-            margin: EdgeInsets.all(16),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(36),
-            ),
-            child: Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: Color(0xFFF2F3F2),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/images/redbellpepper.png',
-                    height: 200,
-                    width: 200,
-                  ),
-                  Text(
-                    'Red Bell Pepper',
-                    style: TextStyle(
-                      color: Color(0xFF181725),
-                      fontSize: 24,
-                      fontFamily: 'DM Sans',
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  
-                ],
-              ),
-            ),
-          ),
-          Card(
-            elevation: 4,
-            margin: EdgeInsets.all(16),
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Product Detail',
-                    style: TextStyle(
-                      color: Color(0xFF181725),
-                      fontSize: 16,
-                      fontFamily: 'DM Sans',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Apples are nutritious. Apples may be good for weight loss. Apples may be good for your heart. As part of a healthy and varied diet.',
-                    style: TextStyle(
-                      color: Color(0xFF7C7C7C),
-                      fontSize: 13,
-                      fontFamily: 'DM Sans',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            elevation: 4,
-            margin: EdgeInsets.all(16),
-            child: Padding(
-              padding: EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Nutrition',
-                    style: TextStyle(
-                      color: Color(0xFF181725),
-                      fontSize: 16,
-                      fontFamily: 'DM Sans',
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Row(
+          Expanded(
+            flex: 1,
+            child: Stack(
+              children: [
+                Container(
+                  color: Colors.white,
+                ),
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFEBEBEB),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: Text(
-                          '100gr',
-                          style: TextStyle(
-                            color: Color(0xFF7C7C7C),
-                            fontSize: 12,
-                            fontFamily: 'DM Sans',
-                            fontWeight: FontWeight.w400,
+                      SizedBox(height: 40),
+                      Expanded(
+                        child: Container(
+                          width: 200,
+                          height: 200,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/redpepperbig.png"),
+                              fit: BoxFit.contain,
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
-          Card(
-            elevation: 4,
-            margin: EdgeInsets.all(16),
-            child: Padding(
-              padding: EdgeInsets.all(16),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.white,
+              width: double.infinity,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Review',
-                        style: TextStyle(
-                          color: Color(0xFF181725),
-                          fontSize: 16,
-                          fontFamily: 'DM Sans',
-                          fontWeight: FontWeight.w400,
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        ListTile(
+                          title: Text(
+                            "Red Bell Pepper",
+                            style: TextStyle(
+                                fontSize: 24, fontWeight: FontWeight.bold),
+                          ),
+                          trailing: Icon(Icons.favorite_border_outlined),
+                          subtitle: Text("1kg, Price"),
                         ),
-                      ),
-                      Icon(Icons.star, color: Colors.yellow),
-                      Icon(Icons.star, color: Colors.yellow),
-                      Icon(Icons.star, color: Colors.yellow),
-                      Icon(Icons.star, color: Colors.yellow),
-                      Icon(Icons.star, color: Colors.yellow),
-                      SizedBox(width: 4),
-                      Text(
-                        '5',
-                        style: TextStyle(
-                          color: Color(0xFF7C7C7C),
-                          fontSize: 16,
-                          fontFamily: 'DM Sans',
-                          fontWeight: FontWeight.w400,
+                        ListTile(
+                          title: Row(
+                            children: [
+                              IconButton(
+                                icon: Icon(Icons.remove),
+                                onPressed: () {
+                                  // decrementQuantity(items[index]);
+                                },
+                              ),
+                              Text(
+                                '1',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.add),
+                                onPressed: () {
+                                  // incrementQuantity(items[index]);
+                                },
+                              ),
+                            ],
+                          ),
+                          trailing: Text(
+                            "\$4.99",
+                            style: TextStyle(fontSize: 20),
+                          ),
                         ),
-                      ),
-                    ],
+                        const ListTile(
+                          title: Text(
+                            "Product Details",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18.0),
+                          ),
+                        ),
+                        const ListTile(
+                          title: Text(
+                            "A red bell pepper is a vibrant, sweet-tasting vegetable known for its brilliant red color and distinctive bell shape. Red bell peppers are rich in vitamins, particularly vitamin C, and provide a satisfying crunch and sweet flavor to culinary creations.",
+                            style: TextStyle(fontSize: 14.0),
+                          ),
+                        ),
+                        const Divider(
+                          color: Color.fromRGBO(190, 190, 190,
+                              1), // You can customize the color of the divider
+                          thickness:
+                              1.0, // You can adjust the thickness of the divider
+                        ),
+                        ListTile(
+                          title: Text(
+                            "Nutrition",
+                            style: TextStyle(
+                                fontSize: 18.0, fontWeight: FontWeight.bold),
+                          ),
+                          trailing: Text("100gr"),
+                        ),
+                        const Divider(
+                          color: Color.fromRGBO(190, 190, 190,
+                              1), // You can customize the color of the divider
+                          thickness:
+                              1.0, // You can adjust the thickness of the divider
+                        ),
+                        ListTile(
+                          title: Text(
+                            "Review",
+                            style: TextStyle(
+                                fontSize: 18.0, fontWeight: FontWeight.bold),
+                          ),
+                          trailing: Image.asset("assets/images/rating.png"),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(25.0),
+                    child: MyFilledButton(
+                      label: "Add to Cart",
+                      fontColor: Colors.white,
+                      fillColor: Colors.black,
+                      borderColor: Colors.transparent,
+                      onPressed: () {
+                        // Handle button press
+                        Navigator.pushNamed(context, "/buyer_select");
+                      },
+                    ),
                   ),
                 ],
               ),
             ),
           ),
-          SizedBox(height: 16),
-          Center(
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.black,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50),
-                ),
-              ),
-              child: Container(
-                width: 250,
-                padding: EdgeInsets.symmetric(vertical: 16),
-                child: Text(
-                  'Add To Basket',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontFamily: 'DM Sans',
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          SizedBox(height: 16),
         ],
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Debugging'),
-      ),
-      body: ProductDetail(),
-    ),
-  ));
 }
