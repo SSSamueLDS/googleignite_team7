@@ -29,6 +29,7 @@ import '../screens/farmertypesearchlisting.dart';
 import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
 import "../screens/buyer_cart.dart";
+import "../screens/buyer_review.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -70,6 +71,7 @@ class MyApp extends StatelessWidget {
         '/farmer_account': (context) => FarmerAccount(),
         '/buyer_account': (context) => BuyerAccount(),
         '/productdetail': (context) => ProductDetail(),
+        '/buyer_review':(context) => BuyerReview(),
         // '/buyer_explore': (context) => BuyerExplore(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
@@ -145,7 +147,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/register_or_login');
+                Navigator.pushNamed(context, '/buyer_review');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
