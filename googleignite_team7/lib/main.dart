@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/screens/farmeraccount.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 // Import your custom widget
@@ -12,17 +13,20 @@ import '../screens/forgot_password.dart';
 
 // Buyer Pages
 import '../screens/buyer_landing.dart';
+import '../screens/buyer_account.dart';
 
 
 import '../screens/buyer_transaction_page.dart';
 
 // Farmer Pages
 import '../screens/farmer_landing.dart';
+import '../screens/farmer_account.dart';
 import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
 import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
+import "../screens/buyer_cart.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -55,8 +59,12 @@ class MyApp extends StatelessWidget {
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
+        '/404': (context) => UnderConstruction(),
+        '/upload': (context) => UploadProduct(),
+        '/buyer_cart': (context) => BuyerCart(),
         '/404' : (context) => UnderConstruction(),
-        '/upload': (context) => Upload(),
+        '/farmer_account': (context) => FarmerAccount(),
+        '/buyer_account': (context) => BuyerAccount(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );

@@ -4,17 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:googleignite_team7/screens/buyer_explore.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Debugging'),
-      ),
-      body: BuyerLanding(),
-    ),
-  ));
-}
-
 class BuyerLanding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

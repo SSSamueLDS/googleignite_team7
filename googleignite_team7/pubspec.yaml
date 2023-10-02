@@ -77,16 +77,28 @@ flutter:
     - assets/images/pearl_millet.jpg
     - assets/images/lentils.png
     - assets/images/ground_peanuts.png
-
+    - assets/images/Account.jpg
     - assets/images/Home.jpg
     - assets/images/VectorLisiting.png
     - assets/images/Group.png
     - assets/images/findmepls.png
     - assets/images/searchbutton.png
     - assets/images/cross.png
-    - assets/images/Account.jpg
     - assets/images/recent.png
     - assets/images/x.png
+    - assets/images/arrow.png
+    - assets/images/apple.png
+    - assets/images/exploreimg1.png
+    - assets/images/exploreimg2.png
+    - assets/images/exploreimg3.png
+    - assets/images/exploreimg4.png
+    - assets/images/exploreimg5.png
+    - assets/images/exploreimg6.png
+    
+    - assets/images/redbellpepper.png
+    - assets/images/eggs.png
+    - assets/images/ginger.png
+    - assets/images/banana.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
