@@ -103,7 +103,7 @@ class Upload extends StatelessWidget {
                     ),
                     Icon(
                       Icons.photo_camera,
-                      color: Colors.indigo[400],
+                      color: Colors.grey[700],
                     )
                   ],
                 ),
@@ -182,7 +182,7 @@ class Upload extends StatelessWidget {
             child: MyFilledButton(
                 label: "Save",
                 onPressed: () {
-                  Navigator.pushNamed(context, '/buyer_landing');
+                  Navigator.pushNamed(context, '/farmersearchlisting');
                 },
                 fillColor: Colors.black,
                 borderColor: Colors.black,

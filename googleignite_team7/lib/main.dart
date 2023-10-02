@@ -48,7 +48,6 @@ class MyApp extends StatelessWidget {
         '/farmerlisting': (context) => Farmerlistingpage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
-        
         '/upload': (context) => Upload(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
