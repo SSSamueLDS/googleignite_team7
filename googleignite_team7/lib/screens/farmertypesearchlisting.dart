@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:googleignite_team7/widgets/SearchButton.dart';
 
-class Farmersearchlisting extends StatelessWidget {
+class Farmertypesearchlisting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Figma Flutter Generator FarmersearchlistingpageWidget - FRAME
@@ -53,19 +53,21 @@ class Farmersearchlisting extends StatelessWidget {
                               color: Color.fromRGBO(255, 255, 255, 1),
                             ))),
                     Positioned(
-                        top: 0,
-                        left: 0,
-                        child: Align(
-                        child: SearchButton(
-                          label: 'Search for your Listings',
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/farmertypesearchlisting');
-                          },
-                            fillColor: Colors.white,
-                            borderColor: Colors.transparent,
-                            fontColor: Colors.white)
+                        top: 15,
+                        left: 45,
+                        child: Text(
+                          'Search for your Listings',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              color: Color.fromRGBO(173, 173, 173, 1),
+                              fontFamily: 'DM Sans',
+                              fontSize: 14,
+                              decoration: TextDecoration.none,
+                              letterSpacing:
+                                  0 /*percentages not used in flutter. defaulting to zero*/,
+                              fontWeight: FontWeight.normal,
+                              height: 1),
                         )),
-                        
                     Positioned(
                         top: 11,
                         left: 13.366392135620117,
@@ -87,7 +89,6 @@ class Farmersearchlisting extends StatelessWidget {
                               ),
                             ]))),
                   ]))),
-         
           Positioned(
               top: 832,
               left: 0,
@@ -378,21 +379,21 @@ class Farmersearchlisting extends StatelessWidget {
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                   ]))),
@@ -439,21 +440,21 @@ class Farmersearchlisting extends StatelessWidget {
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                   ]))),
@@ -467,21 +468,21 @@ class Farmersearchlisting extends StatelessWidget {
                     Positioned(
                       top: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                     Positioned(
                       top: 0,
                       left: 0,
                       child: Image.asset(
-                        'assets/images/recent.png',
+                        'assets/images/searchbutton.png',
                       ),
                     ),
                   ]))),
