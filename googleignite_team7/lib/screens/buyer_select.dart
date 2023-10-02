@@ -329,6 +329,10 @@ class HorizontalScrollExample extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
+              //             InkWell(
+              //               onTap: () {
+              //   Navigator.pushNamed(context, '/productdetail');
+              // }),
                           Container(
                             height: 150, // Adjust the height as needed
                             width:
@@ -338,7 +342,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg1.png', // Replace with your image path
+                              'assets/images/apple.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -346,7 +350,7 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Fresh Fruit and Vegetables',
+                              'Apple',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
@@ -372,7 +376,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg2.png', // Replace with your image path
+                              'assets/images/banana.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -380,7 +384,7 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Cooking Oil & Ghee',
+                              'Banana',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
@@ -406,7 +410,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg3.png', // Replace with your image path
+                              'assets/images/redbellpepper.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -414,7 +418,7 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Meat & Fish',
+                              'Red Bell Pepper',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
@@ -440,7 +444,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg4.png', // Replace with your image path
+                              'assets/images/ginger.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -448,7 +452,7 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Bakery & Snacks',
+                              'ginger',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                             ),
@@ -457,74 +461,7 @@ class HorizontalScrollExample extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        // color: Colors.orange,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150, // Adjust the height as needed
-                            width:
-                                double.infinity, // Adjust the width as needed
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
-                            ),
-                            child: Image.asset(
-                              'assets/images/exploreimg5.png', // Replace with your image path
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Dairy & Eggs',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
-                            ),
-                          ),
-                        
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        // color: Colors.orange,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height:150, // Adjust the height as needed
-                            width:
-                                double.infinity, // Adjust the width as needed
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
-                            ),
-                            child: Image.asset(
-                              'assets/images/exploreimg6.png', // Replace with your image path
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Beverages',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
-                            ),
-                          ),
-                          
-                        ],
-                      ),
-                    ),
+                    
                   ]),
             ),
           ),
