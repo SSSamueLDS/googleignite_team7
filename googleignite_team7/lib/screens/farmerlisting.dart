@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/widgets/AnotherButton.dart';
+import 'package:googleignite_team7/widgets/OrderButton.dart';
 
 class Farmerlistingpage extends StatelessWidget {
   @override
@@ -360,9 +361,16 @@ class Farmerlistingpage extends StatelessWidget {
                               Positioned(
                                   top: 0,
                                   left: 1,
-                                  child: Container(
-                                      width: 42.42858123779297,
-                                      height: 26.999961853027344,
+                                  child: Align(
+                                    child: OrderButton(
+                                      label: "Orders",
+                                      onPressed: () {
+                                        Navigator.pushNamed(context, '/farmeruploadlisting');
+                                      },
+                                      fillColor: Color.fromRGBO(0, 107, 60, 1), 
+                                      borderColor: Colors.transparent,
+                                      fontColor: Color.fromRGBO(0, 107, 60, 1))
+                                      ),
                                       child: Stack(children: <Widget>[
                                         Positioned(
                                           top: 19.285676956176758,
@@ -388,7 +396,7 @@ class Farmerlistingpage extends StatelessWidget {
                                           child: Image.asset(
                                               'assets/images/Group.png'),
                                         ),
-                                      ]))),
+                                      ])),
                             ]))),
                   ]))),
           Positioned(
