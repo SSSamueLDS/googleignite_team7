@@ -22,11 +22,12 @@ import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
 import '../screens/farmers_orders_page.dart';
-
+import '../screens/buyer_account.dart';
 import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
 import "../screens/buyer_cart.dart";
 import "../screens/payment_successful.dart";
+import "../screens/buyer_review.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
         '/farmer_account': (context) => FarmerAccount(),
         '/buyer_account': (context) => BuyerAccount(),
         '/productdetail': (context) => ProductDetail(),
+        '/buyer_review':(context) => BuyerReview(),
         // '/buyer_explore': (context) => BuyerExplore(),
         '/payment_successful':(context) => payment_successful()
       },
