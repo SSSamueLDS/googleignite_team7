@@ -13,12 +13,7 @@ import '../screens/register.dart';
 import '../screens/forgot_password.dart';
 
 // Buyer Pages
-
-import '../screens/buyer_explore.dart';
-import '../screens/buyer_account.dart';
-import '../screens/buyer_select.dart';
-
-import '../screens/buyer_transaction_page.dart';
+import '../screens/buyer_landing.dart';
 
 // Farmer Pages
 import '../screens/farmer_landing.dart';
@@ -31,6 +26,7 @@ import '../screens/farmers_orders_page.dart';
 import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
 import "../screens/buyer_cart.dart";
+import "../screens/payment_successful.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -56,11 +52,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
-      
-        '/buyer_explore': (context) => BuyerExploreBuild(),
-        '/buyer_select':(context) => BuyerSelect(), // BuyerSelect is a placeholder
-        // placeholders
-        '/transaction_checkout': (context) => CheckoutPage(),
+
         '/farmer_landing': (context) => FarmerLanding(),
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
@@ -78,6 +70,7 @@ class MyApp extends StatelessWidget {
         '/buyer_account': (context) => BuyerAccount(),
         '/productdetail': (context) => ProductDetail(),
         // '/buyer_explore': (context) => BuyerExplore(),
+        '/payment_successful':(context) => payment_successful()
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
@@ -152,7 +145,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/register_or_login');
+                Navigator.pushNamed(context, '/registerorlogin');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
