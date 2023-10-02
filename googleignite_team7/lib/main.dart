@@ -16,6 +16,9 @@ import '../screens/forgot_password.dart';
 import '../screens/buyer_landing.dart';
 import '../screens/buyer_account.dart';
 
+
+import '../screens/buyer_transaction_page.dart';
+
 // Farmer Pages
 import '../screens/farmer_landing.dart';
 import '../screens/farmer_account.dart';
@@ -51,6 +54,8 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
         '/buyer_landing': (context) => BuyerLanding(),
+        // placeholders
+        '/transaction_checkout': (context) => CheckoutPage(),
         '/farmer_landing': (context) => FarmerLanding(),
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
