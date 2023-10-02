@@ -3,16 +3,18 @@
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/screens/buyer_explore.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
+
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      appBar: AppBar(
-        title: Text('Debugging'),
-      ),
+      // appBar: AppBar(
+      //   title: Text('Debugging'),
+      // ),
       body: BuyerExplore(),
     ),
   ));
 }
+
 class BuyerExplore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class BuyerExplore extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 40),
               _buildLogo(context),
               Expanded(
                   child: Stack(
@@ -181,33 +184,51 @@ class _BuyerExplores extends State<BuyerExplores> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
           });
+          // for changing of pages
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/buyer_landing');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/buyer_explore');
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/buyer_cart');
+              break;
+            case 3:
+              break;
+            case 4:
+              Navigator.pushNamed(context, '/buyer_account');
+              break;
+          }
         },
-        elevation: 8.0, // Add elevation here
-        selectedItemColor:
-            Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
-        unselectedItemColor: Colors.grey, // Set the unselected tab text color
+        elevation: 8.0,
+        selectedItemColor: Color.fromRGBO(0, 107, 60, 1),
+        unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.shopping_bag),
+            label: 'Shop',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.view_module),
-            label: 'Listings',
+            label: 'Explore',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_shipping),
-            label: 'Orders',
+            icon: Icon(Icons.shopping_cart),
+            label: 'Cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
+            icon: Icon(Icons.favorite),
+            label: 'Favourite',
           ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account")
         ],
       ),
     );
@@ -260,7 +281,6 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          
                         ],
                       ),
                     ),
@@ -285,8 +305,6 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                       
-                          
                         ],
                       ),
                     ),
@@ -311,7 +329,6 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          
                         ],
                       ),
                     ),
@@ -336,7 +353,6 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                         
                         ],
                       ),
                     ),
@@ -361,7 +377,6 @@ class HorizontalScrollExample extends StatelessWidget {
                               fit: BoxFit.contain,
                             ),
                           ),
-                          
                         ],
                       ),
                     ),
@@ -387,7 +402,6 @@ class HorizontalScrollExample extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 8),
-                        
                         ],
                       ),
                     ),
