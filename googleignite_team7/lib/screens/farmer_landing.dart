@@ -103,6 +103,7 @@ class FarmerLanding extends StatefulWidget {
 }
 
 class _FarmerLandingState extends State<FarmerLanding> {
+  final TextEditingController _searchController = TextEditingController();
   int _currentIndex = 0;
 
   @override
@@ -132,26 +133,47 @@ class _FarmerLandingState extends State<FarmerLanding> {
                       Image.asset(
                         'assets/images/logo_without_text.png',
                       ),
-                      
-                    const Spacer(),
-                    const Spacer(),
-                      FloatingActionButton.small(
-                        onPressed: () {},
-                        
-                        backgroundColor: Color.fromRGBO(0, 107, 60, 1),
-                        child: const Icon(Icons.add),
-                      )
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: TextField(
+                          controller: _searchController,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: 'Search...',
+                            suffixIcon: IconButton(
+                              icon: Icon(Icons.clear),
+                              onPressed: () => _searchController.clear(),
+                            ),
+                            prefixIcon: IconButton(
+                              icon: Icon(Icons.search),
+                              onPressed: () {
+                                // Perform the search here
+                              },
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                              borderSide: const BorderSide(
+                                color: Colors
+                                    .green, // Replace Colors.blue with your desired color
+                                width:
+                                    2.0, // You can adjust the width of the border
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+          // Expanded(
+          //   child: SearchResults(),
+          // ),
           Expanded(
-            child: SearchResults(),
-          ),
-          Expanded(
-            flex: 3,
+            flex: 2,
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: HorizontalScrollExample(
@@ -218,6 +240,16 @@ class HorizontalScrollExample extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Align(
+          alignment: Alignment.topRight,
+          child: FloatingActionButton.small(
+            onPressed: () {
+              Navigator.pushNamed(context, '/upload');
+            },
+            backgroundColor: Color.fromRGBO(0, 107, 60, 1),
+            child: const Icon(Icons.add),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(

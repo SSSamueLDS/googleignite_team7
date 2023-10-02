@@ -182,7 +182,7 @@ class UploadProduct extends StatelessWidget {
             child: MyFilledButton(
                 label: "Save",
                 onPressed: () {
-                  Navigator.pushNamed(context, '/farmersearchlisting');
+                  Navigator.pushNamed(context, '/farmer_landing');
                 },
                 fillColor: Colors.black,
                 borderColor: Colors.black,

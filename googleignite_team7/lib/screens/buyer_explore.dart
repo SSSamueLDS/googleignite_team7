@@ -16,6 +16,7 @@ void main() {
 }
 
 class BuyerExploreBuild extends StatelessWidget {
+  final TextEditingController _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +35,36 @@ class BuyerExploreBuild extends StatelessWidget {
             children: [
               SizedBox(height: 40),
               _buildLogo(context),
+              Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: TextField(
+                          controller: _searchController,
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Colors.white,
+                            hintText: 'Search...',
+                            suffixIcon: IconButton(
+                              icon: Icon(Icons.clear),
+                              onPressed: () => _searchController.clear(),
+                            ),
+                            prefixIcon: IconButton(
+                              icon: Icon(Icons.search),
+                              onPressed: () {
+                                // Perform the search here
+                              },
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                              borderSide: const BorderSide(
+                                color: Colors
+                                    .green, // Replace Colors.blue with your desired color
+                                width:
+                                    2.0, // You can adjust the width of the border
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
               Expanded(
                   child: Stack(
                 children: [
@@ -169,9 +200,9 @@ class _BuyerExplores extends State<BuyerExplores> {
     return Scaffold(
       body: Column(
         children: [
-          Expanded(
-            child: SearchResults(),
-          ),
+          // Expanded(
+          //   child: SearchResults(),
+          // ),
           Expanded(
             flex: 3,
             child: Padding(
@@ -274,7 +305,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
                               'assets/images/exploreimg1.png', // Replace with your image path
@@ -298,7 +328,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
                               'assets/images/exploreimg2.png', // Replace with your image path
@@ -322,7 +351,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
                               'assets/images/exploreimg3.png', // Replace with your image path
@@ -346,7 +374,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
                               'assets/images/exploreimg5.png', // Replace with your image path
@@ -370,7 +397,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
                               'assets/images/exploreimg4.png', // Replace with your image path
@@ -394,7 +420,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
                               'assets/images/exploreimg6.png', // Replace with your image path

@@ -100,6 +100,8 @@ flutter:
     - assets/images/ginger.png
     - assets/images/banana.png
     - assets/images/banner.png
+    - assets/images/apple_red.png
+    - assets/images/grapes.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
