@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 class FarmerAccount extends StatefulWidget {
   @override
@@ -89,24 +90,24 @@ class ListMenuOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
-        ListTile(
+      children: [
+        const ListTile(
           title: Text(
             "My Account",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
           ),
         ),
-        ListTile(
+        const ListTile(
           title: Text(
             "Profile Information",
             style: TextStyle(fontSize: 16.0),
           ),
         ),
-        Divider(
+        const Divider(
           color: Color.fromRGBO(190, 190, 190, 1), // You can customize the color of the divider
           thickness: 1.0, // You can adjust the thickness of the divider
         ),
-        ListTile(
+        const ListTile(
           title: Text(
             "Customer Subscription",
             style: TextStyle(fontSize: 16.0),
@@ -114,48 +115,60 @@ class ListMenuOptions extends StatelessWidget {
         ),
         
 
-        ListTile(
+        const ListTile(
           title: Text(
             "General",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
           ),
         ),
-        ListTile(
+        const ListTile(
           title: Text(
             "Help Centre",
             style: TextStyle(fontSize: 16.0),
           ),
         ),
-        Divider(
+        const Divider(
           color: Color.fromRGBO(190, 190, 190, 1), // You can customize the color of the divider
           thickness: 1.0, // You can adjust the thickness of the divider
         ),
-        ListTile(
+        const ListTile(
           title: Text(
             "Settings",
             style: TextStyle(fontSize: 16.0),
           ),
         ),
-        Divider(
+        const Divider(
           color: Color.fromRGBO(190, 190, 190, 1), // You can customize the color of the divider
           thickness: 1.0, // You can adjust the thickness of the divider
         ),
-        ListTile(
+        const ListTile(
           title: Text(
             "Languages",
             style: TextStyle(fontSize: 16.0),
           ),
         ),
-        Divider(
+        const Divider(
           color: Color.fromRGBO(190, 190, 190, 1), // You can customize the color of the divider
           thickness: 1.0, // You can adjust the thickness of the divider
         ),
-        ListTile(
+        const ListTile(
           title: Text(
             "Share Feedback",
             style: TextStyle(fontSize: 16.0),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
+          child: MyFilledButton(
+            label: "Logout",
+            onPressed: () {
+              Navigator.pushNamed(context, '/register_or_login');
+            },
+            fillColor: Colors.black,
+            borderColor: Colors.transparent,
+            fontColor: Colors.white,
+          ),
+        )
       ],
     );
   }
