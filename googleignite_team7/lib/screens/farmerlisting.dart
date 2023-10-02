@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/widgets/AnotherButton.dart';
 
-class Farmerlistingpage extends StatelessWidget {
+class FarmerListingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Figma Flutter Generator FarmerlistingpageWidget - FRAME

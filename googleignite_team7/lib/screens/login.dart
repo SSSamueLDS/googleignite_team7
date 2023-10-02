@@ -184,7 +184,7 @@ class _MyFormState extends State<MyForm> {
                   if (_email=="buyer@gmail.com" && _password == "buyer") {
                     Navigator.pushNamed(context, '/buyer_landing');
                   } else {
-                    Navigator.pushNamed(context, '/farmerlisting');
+                    Navigator.pushNamed(context, '/farmer_landing');
                   }
                 }
               },
