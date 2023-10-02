@@ -13,7 +13,7 @@ import '../screens/register.dart';
 import '../screens/forgot_password.dart';
 
 // Buyer Pages
-import '../screens/buyer_landing.dart';
+
 import '../screens/buyer_explore.dart';
 import '../screens/buyer_account.dart';
 import '../screens/buyer_select.dart';
@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => Login(),
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
-        '/buyer_landing': (context) => BuyerLanding(),
+      
         '/buyer_explore': (context) => BuyerExploreBuild(),
         '/buyer_select':(context) => BuyerSelect(), // BuyerSelect is a placeholder
         // placeholders

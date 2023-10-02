@@ -137,7 +137,7 @@ class _SearchResultsState extends State<SearchResults> {
               ),
             ),
             Container(
-              height: 400,
+              height: 40,
               child: ListView.builder(
                 itemCount: filteredData.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -246,6 +246,28 @@ class HorizontalScrollExample extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+         Container(
+          height: 150, // Adjust the height as needed
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/banner.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 240, // Adjust the image width as needed
+                      ),
+                     
+                    ],
+                  ),
+                ),
+              
+            ],
+          ),
+         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(5.0),
