@@ -14,10 +14,11 @@ import '../screens/forgot_password.dart';
 import '../screens/buyer_landing.dart';
 
 // Farmer Pages
+import '../screens/farmer_landing.dart';
 import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
-
+import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
 
 void main() {
@@ -45,9 +46,11 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
         '/buyer_landing': (context) => BuyerLanding(),
-        '/farmerlisting': (context) => Farmerlistingpage(),
+        '/farmer_landing': (context) => FarmerLanding(),
+        '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
+        '/404' : (context) => UnderConstruction(),
         '/upload': (context) => Upload(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
@@ -123,7 +126,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/upload');
+                Navigator.pushNamed(context, '/register_or_login');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
