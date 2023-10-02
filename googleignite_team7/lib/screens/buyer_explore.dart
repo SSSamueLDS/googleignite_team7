@@ -29,14 +29,17 @@ class BuyerExplore extends StatelessWidget {
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [_buildLogo(context), 
-            Expanded(child: 
-            Stack(children: [
-              
-              Expanded(child: BuyerExplores(),)
-
-            ],)
-            )],
+            children: [
+              _buildLogo(context),
+              Expanded(
+                  child: Stack(
+                children: [
+                  Expanded(
+                    child: BuyerExplore(),
+                  )
+                ],
+              ))
+            ],
           ),
         ]),
       ),
@@ -44,18 +47,16 @@ class BuyerExplore extends StatelessWidget {
   }
 }
 
-  @override
-  Widget _buildLogo(BuildContext context) {
-    return Container(
-      height: 100,
-      margin: const EdgeInsets.only(top: 5),
-      child: Image.asset(
-        'assets/images/logo_without_text.png',
-      ),
-    );
-  }
-
-  
+@override
+Widget _buildLogo(BuildContext context) {
+  return Container(
+    height: 100,
+    margin: const EdgeInsets.only(top: 5),
+    child: Image.asset(
+      'assets/images/logo_without_text.png',
+    ),
+  );
+}
 
 class SearchResults extends StatefulWidget {
   @override
@@ -83,8 +84,6 @@ class _SearchResultsState extends State<SearchResults> {
   @override
   void initState() {
     super.initState();
-    
-    
   }
 
   void filterSearchResults(String query) {
@@ -121,39 +120,38 @@ class _SearchResultsState extends State<SearchResults> {
       child: SingleChildScrollView(
         padding: EdgeInsets.all(5.0),
         child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(4.0),
-          child: TextField(
-            onChanged: (value) {
-              filterSearchResults(value);
-            },
-            decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
-              hintText: 'Search Store',
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(4.0),
+              child: TextField(
+                onChanged: (value) {
+                  filterSearchResults(value);
+                },
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: 'Search Store',
+                ),
+              ),
             ),
-          ),
+            Container(
+              height: 400,
+              child: ListView.builder(
+                itemCount: filteredData.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return ListTile(
+                    title: Text(filteredData[index]),
+                    // You can add more details or customize ListTile as needed
+                  );
+                },
+              ),
+            ),
+          ],
         ),
-        Container(
-          height: 400,
-          child: ListView.builder(
-            itemCount: filteredData.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(filteredData[index]),
-                // You can add more details or customize ListTile as needed
-              );
-            },
-          ),
-        ),
-      ],
-    ),
       ),
     );
   }
 }
-
 
 class BuyerExplores extends StatefulWidget {
   @override
@@ -168,14 +166,14 @@ class _BuyerExplores extends State<BuyerExplores> {
     return Scaffold(
       body: Column(
         children: [
-          Expanded(child: SearchResults(),),
-
+          Expanded(
+            child: SearchResults(),
+          ),
           Expanded(
             flex: 3,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: HorizontalScrollExample(
-               
                 verticalHeaderText: 'All Listings',
               ),
             ),
@@ -190,7 +188,8 @@ class _BuyerExplores extends State<BuyerExplores> {
           });
         },
         elevation: 8.0, // Add elevation here
-        selectedItemColor: Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
+        selectedItemColor:
+            Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
         unselectedItemColor: Colors.grey, // Set the unselected tab text color
         items: const [
           BottomNavigationBarItem(
@@ -219,7 +218,6 @@ class HorizontalScrollExample extends StatelessWidget {
   final String verticalHeaderText;
 
   HorizontalScrollExample({
-  
     required this.verticalHeaderText,
   });
 
@@ -271,7 +269,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
-                          
                         ],
                       ),
                     ),
@@ -305,7 +302,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
-                          
                         ],
                       ),
                     ),
@@ -339,41 +335,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
-                         
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        // color: Colors.orange,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150, // Adjust the height as needed
-                            width:
-                                double.infinity, // Adjust the width as needed
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
-                            ),
-                            child: Image.asset(
-                              'assets/images/exploreimg4.png', // Replace with your image path
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Bakery & Snacks',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12),
-                            ),
-                          ),
-                          
                         ],
                       ),
                     ),
@@ -407,7 +368,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
-                        
                         ],
                       ),
                     ),
@@ -420,7 +380,40 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height:150, // Adjust the height as needed
+                            height: 150, // Adjust the height as needed
+                            width:
+                                double.infinity, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              color: const Color.fromRGBO(240, 240, 240, 1),
+                            ),
+                            child: Image.asset(
+                              'assets/images/exploreimg4.png', // Replace with your image path
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          const Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Bakery & Snacks',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 12),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -441,7 +434,6 @@ class HorizontalScrollExample extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
-                          
                         ],
                       ),
                     ),
