@@ -66,7 +66,7 @@ class MyForm extends StatefulWidget {
 class _MyFormState extends State<MyForm> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool passwordVisible = false;
-  String _username = '';
+  String _phonenumber = '';
   String _password = '';
 
   @override
@@ -112,7 +112,7 @@ class _MyFormState extends State<MyForm> {
               return null;
             },
             onSaved: (value) {
-              _username = value!;
+              _phonenumber = value!;
             },
           ),
           TextFormField(
@@ -168,10 +168,11 @@ class _MyFormState extends State<MyForm> {
                 if (_formKey.currentState!.validate()) {
                   // If the form is valid, display a snackbar. In the real world,
                   // you'd often call a server or save the information in a database.
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Processing Data')),
-                  );
-                  Navigator.pushNamed(context, '/buyer_landing');
+                  if (_phonenumber == "97663055" && _password == "password") {
+                    Navigator.pushNamed(context, '/buyer_landing');
+                  } else {
+                    Navigator.pushNamed(context, '/farmerlisting');
+                  }
                 }
               },
               fillColor: Colors.black,
