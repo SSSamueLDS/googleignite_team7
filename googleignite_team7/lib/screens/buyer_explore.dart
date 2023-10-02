@@ -35,7 +35,7 @@ class BuyerExplore extends StatelessWidget {
                   child: Stack(
                 children: [
                   Expanded(
-                    child: BuyerExplore(),
+                    child: BuyerExplores(),
                   )
                 ],
               ))
