@@ -50,17 +50,13 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
       
-        '/buyer_explore': (context) => BuyerExploreBuild(),
-        '/buyer_select':(context) => BuyerSelect(), // BuyerSelect is a placeholder
-        // placeholders
-        '/transaction_checkout': (context) => CheckoutPage(),
+        
         '/farmer_landing': (context) => FarmerLanding(),
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
         '/404' : (context) => UnderConstruction(),
-        '/upload': (context) => Upload(),
-      },
+       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
   }
