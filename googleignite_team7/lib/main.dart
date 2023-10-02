@@ -26,6 +26,8 @@ import '../screens/farmer_account.dart';
 import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
+import '../screens/farmers_orders_page.dart';
+
 import '../screens/underconstruction.dart';
 import "../screens/upload.dart";
 import "../screens/buyer_cart.dart";
@@ -63,10 +65,15 @@ class MyApp extends StatelessWidget {
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
+        '/farmerorders': (context) => FarmerOrders(),
+
+
         '/404': (context) => UnderConstruction(),
         '/upload': (context) => UploadProduct(),
         '/buyer_cart': (context) => BuyerCart(),
         '/404': (context) => UnderConstruction(),
+
+
         '/farmer_account': (context) => FarmerAccount(),
         '/buyer_account': (context) => BuyerAccount(),
         '/productdetail': (context) => ProductDetail(),
