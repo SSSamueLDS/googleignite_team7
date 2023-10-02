@@ -3,8 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/screens/buyer_explore.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
-
-class BuyerLanding extends StatelessWidget {
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Debugging'),
+      ),
+      body: BuyerExplore(),
+    ),
+  ));
+}
+class BuyerExplore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +33,7 @@ class BuyerLanding extends StatelessWidget {
             Expanded(child: 
             Stack(children: [
               
-              Expanded(child: BuyerExplore(),)
+              Expanded(child: BuyerExplores(),)
 
             ],)
             )],
@@ -146,12 +155,12 @@ class _SearchResultsState extends State<SearchResults> {
 }
 
 
-class BuyerExplore extends StatefulWidget {
+class BuyerExplores extends StatefulWidget {
   @override
-  _BuyerExplore createState() => _BuyerExplore();
+  _BuyerExplores createState() => _BuyerExplores();
 }
 
-class _BuyerExplore extends State<BuyerExplore> {
+class _BuyerExplores extends State<BuyerExplores> {
   int _currentIndex = 0;
 
   @override
