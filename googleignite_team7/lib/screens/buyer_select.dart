@@ -10,12 +10,12 @@ void main() {
       appBar: AppBar(
         title: Text('Debugging'),
       ),
-      body: BuyerLanding(),
+      body: BuyerSelect(),
     ),
   ));
 }
 
-class BuyerLanding extends StatelessWidget {
+class BuyerSelect extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -138,7 +138,8 @@ class _SearchResultsState extends State<SearchResults> {
           ),
         ),
         Container(
-          height: 400,
+          height: 50,
+          width:250,
           child: ListView.builder(
             itemCount: filteredData.length,
             itemBuilder: (BuildContext context, int index) {
@@ -184,35 +185,7 @@ class _BuyerExplore extends State<BuyerExplore> {
           )
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        elevation: 8.0, // Add elevation here
-        selectedItemColor: Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
-        unselectedItemColor: Colors.grey, // Set the unselected tab text color
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.view_module),
-            label: 'Listings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_shipping),
-            label: 'Orders',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      
     );
   }
 }
@@ -230,6 +203,111 @@ class HorizontalScrollExample extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        
+        Container(
+          height: 150, // Adjust the height as needed
+          child: ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg1.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                     
+                    ],
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg2.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                      
+                    ],
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg3.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                   
+                      
+                    ],
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg4.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                      
+                    ],
+                  ),
+                ),
+              ),
+              // Add more items as needed
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            verticalHeaderText,
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+        ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(5.0),
