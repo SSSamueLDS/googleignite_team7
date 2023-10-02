@@ -155,7 +155,7 @@ class _SearchResultsState extends State<SearchResults> {
   }
 }
 
-class BuyerExplore extends StatefulWidget {
+class BuyerLand extends StatefulWidget {
   @override
   _BuyerLand createState() => _BuyerLand();
 }
