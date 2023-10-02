@@ -14,6 +14,7 @@ import '../screens/forgot_password.dart';
 import '../screens/buyer_landing.dart';
 
 // Farmer Pages
+import "../screens/upload.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
         '/buyer_landing': (context) => BuyerLanding(),
+        '/upload': (context) => Upload(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
@@ -114,7 +116,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/register_or_login');
+                Navigator.pushNamed(context, '/upload');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
