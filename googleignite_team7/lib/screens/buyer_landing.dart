@@ -37,7 +37,7 @@ class BuyerLanding extends StatelessWidget {
                   child: Stack(
                 children: [
                   Expanded(
-                    child: BuyerExplore(),
+                    child: BuyerLand(),
                   )
                 ],
               ))

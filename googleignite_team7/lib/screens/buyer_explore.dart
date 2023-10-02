@@ -9,11 +9,12 @@ void main() {
       appBar: AppBar(
         title: Text('Debugging'),
       ),
-      body: BuyerExplore(),
+      body: BuyerExploreBuild(),
     ),
   ));
 }
-class BuyerExplore extends StatelessWidget {
+class BuyerExploreBuild extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
