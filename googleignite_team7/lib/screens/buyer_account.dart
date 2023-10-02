@@ -27,7 +27,7 @@ class _BuyerAccountState extends State<BuyerAccount> {
                     ),
                   ),
                 ),
-                const Center(
+                Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

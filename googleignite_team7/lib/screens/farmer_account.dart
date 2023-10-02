@@ -27,7 +27,7 @@ class _FarmerAccountState extends State<FarmerAccount> {
                     ),
                   ),
                 ),
-                const Center(
+                Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
