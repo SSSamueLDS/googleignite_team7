@@ -30,10 +30,10 @@ class _FarmerLandingState extends State<FarmerLanding> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
+                      SizedBox(height: 30),
                       Image.asset(
                         'assets/images/logo_without_text.png',
                       ),
-                      SizedBox(height: 20),
                       FloatingActionButton.small(
                         onPressed: () {},
                         backgroundColor: Color.fromRGBO(0, 107, 60, 1),
