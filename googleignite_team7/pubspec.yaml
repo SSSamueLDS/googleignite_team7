@@ -95,6 +95,10 @@ flutter:
     - assets/images/exploreimg5.png
     - assets/images/exploreimg6.png
     
+    - assets/images/redbellpepper.png
+    - assets/images/eggs.png
+    - assets/images/ginger.png
+    - assets/images/banana.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
