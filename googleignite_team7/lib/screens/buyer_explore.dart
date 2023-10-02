@@ -7,15 +7,15 @@ import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
-      // appBar: AppBar(
-      //   title: Text('Debugging'),
-      // ),
-      body: BuyerExplore(),
+      appBar: AppBar(
+        title: Text('Debugging'),
+      ),
+      body: BuyerExploreBuild(),
     ),
   ));
 }
+class BuyerExploreBuild extends StatelessWidget {
 
-class BuyerExplore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
