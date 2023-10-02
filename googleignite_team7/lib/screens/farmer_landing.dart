@@ -1,5 +1,112 @@
 import 'package:flutter/material.dart';
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Debugging'),
+      ),
+      body: FarmerLanding(),
+    ),
+  ));
+}
+  
 
+class SearchResults extends StatefulWidget {
+  @override
+  _SearchResultsState createState() => _SearchResultsState();
+}
+
+class _SearchResultsState extends State<SearchResults> {
+  bool filteredDataVisible = false;
+
+  List<String> data = [
+    'Apple',
+    'Banana',
+    'Cherry',
+    'Date',
+    'Grapes',
+    'Lemon',
+    'Orange',
+    'Peach',
+    'Pear',
+    'Plum',
+  ];
+
+  List<String> filteredData = [];
+
+  @override
+  void initState() {
+    super.initState();
+    
+    
+  }
+
+  void filterSearchResults(String query) {
+    List<String> dummySearchList = <String>[];
+    dummySearchList.addAll(data);
+    if (query.isNotEmpty) {
+      filteredData.addAll(data);
+      List<String> dummyListData = <String>[];
+      dummySearchList.forEach((item) {
+        if (item.toLowerCase().contains(query.toLowerCase())) {
+          dummyListData.add(item);
+        }
+      });
+      setState(() {
+        filteredData.clear();
+        filteredData.addAll(dummyListData);
+      });
+      return;
+    } else {
+      setState(() {
+        filteredData.clear();
+        filteredData.addAll(data);
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      margin: EdgeInsets.all(5),
+      child: SingleChildScrollView(
+        padding: EdgeInsets.all(5.0),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: TextField(
+            onChanged: (value) {
+              filterSearchResults(value);
+            },
+            decoration: InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              hintText: 'Search Store',
+            ),
+          ),
+        ),
+        Container(
+          height: 10,
+          child: ListView.builder(
+            itemCount: filteredData.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text(filteredData[index]),
+                // You can add more details or customize ListTile as needed
+              );
+            },
+          ),
+        ),
+      ],
+    ),
+      ),
+    );
+  }
+}
 class FarmerLanding extends StatefulWidget {
   @override
   _FarmerLandingState createState() => _FarmerLandingState();
@@ -13,6 +120,7 @@ class _FarmerLandingState extends State<FarmerLanding> {
     return Scaffold(
       body: Column(
         children: [
+          
           Expanded(
             flex: 1,
             child: Stack(
@@ -30,12 +138,16 @@ class _FarmerLandingState extends State<FarmerLanding> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 30),
+                      SizedBox(height: 20),
                       Image.asset(
                         'assets/images/logo_without_text.png',
                       ),
+                      
+                    const Spacer(),
+                    const Spacer(),
                       FloatingActionButton.small(
                         onPressed: () {},
+                        
                         backgroundColor: Color.fromRGBO(0, 107, 60, 1),
                         child: const Icon(Icons.add),
                       )
@@ -44,6 +156,9 @@ class _FarmerLandingState extends State<FarmerLanding> {
                 ),
               ],
             ),
+          ),
+          Expanded(
+            child: SearchResults(),
           ),
           Expanded(
             flex: 3,
