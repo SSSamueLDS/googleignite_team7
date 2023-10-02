@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => Register(),
         '/forgot_password': (context) => ForgotPassword(),
         '/buyer_landing': (context) => BuyerLanding(),
-        '/buyer_explore': (context) => BuyerExplore(),
+        '/buyer_explore': (context) => BuyerExploreBuild(),
         '/buyer_select':(context) => BuyerSelect(), // BuyerSelect is a placeholder
         // placeholders
         '/transaction_checkout': (context) => CheckoutPage(),
