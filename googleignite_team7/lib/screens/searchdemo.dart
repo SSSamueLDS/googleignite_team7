@@ -1,55 +1,22 @@
-// ignore_for_file: override_on_non_overriding_member
-
 import 'package:flutter/material.dart';
-import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
-class BuyerLanding extends StatelessWidget {
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Stack(children: [
-          Container(
-            constraints: const BoxConstraints.expand(),
-            decoration: const BoxDecoration(
-                image: DecorationImage(
-              image: AssetImage("assets/images/background.jpg"),
-              fit: BoxFit.cover,
-            )),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [_buildLogo(context), Expanded(child: SearchResults())],
-          ),
-        ]),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Search Bar Example'),
+        ),
+        body: SearchResults(),
       ),
     );
   }
 }
-
-  @override
-  Widget _buildLogo(BuildContext context) {
-    return Container(
-      height: 200,
-      margin: const EdgeInsets.only(top: 30),
-      child: Image.asset(
-        'assets/images/logo_without_text.png',
-      ),
-    );
-  }
-
-  @override
-  Widget _buildSecondContainer(BuildContext context) {
-    return Container(
-      height: 100,
-      width: 100,
-      child: 
-      SingleChildScrollView(
-        child: SearchResults(),
-      ), 
-    );
-  }
-
 
 class SearchResults extends StatefulWidget {
   @override
@@ -57,8 +24,6 @@ class SearchResults extends StatefulWidget {
 }
 
 class _SearchResultsState extends State<SearchResults> {
-  bool filteredDataVisible = false;
-
   List<String> data = [
     'Apple',
     'Banana',
@@ -77,15 +42,13 @@ class _SearchResultsState extends State<SearchResults> {
   @override
   void initState() {
     super.initState();
-    
-    
+    filteredData.addAll(data);
   }
 
   void filterSearchResults(String query) {
     List<String> dummySearchList = <String>[];
     dummySearchList.addAll(data);
     if (query.isNotEmpty) {
-      filteredData.addAll(data);
       List<String> dummyListData = <String>[];
       dummySearchList.forEach((item) {
         if (item.toLowerCase().contains(query.toLowerCase())) {
@@ -107,15 +70,7 @@ class _SearchResultsState extends State<SearchResults> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      margin: EdgeInsets.only(top: 32.0, left: 32.0, right: 32.0, bottom: 50.0),
-      child: SingleChildScrollView(
-        padding: EdgeInsets.all(32.0),
-        child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Column(
       children: <Widget>[
         Padding(
           padding: const EdgeInsets.all(8.0),
@@ -124,13 +79,11 @@ class _SearchResultsState extends State<SearchResults> {
               filterSearchResults(value);
             },
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
-              hintText: 'Search Store',
+              hintText: 'Search...',
             ),
           ),
         ),
-        Container(
-          height: 400,
+        Expanded(
           child: ListView.builder(
             itemCount: filteredData.length,
             itemBuilder: (BuildContext context, int index) {
@@ -142,8 +95,6 @@ class _SearchResultsState extends State<SearchResults> {
           ),
         ),
       ],
-    ),
-      ),
     );
   }
 }

@@ -18,6 +18,8 @@ import '../screens/farmer_landing.dart';
 import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
+import '../screens/underconstruction.dart';
+import "../screens/upload.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -48,6 +50,8 @@ class MyApp extends StatelessWidget {
         '/farmerlisting': (context) => FarmerListingPage(),
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
+        '/404' : (context) => UnderConstruction(),
+        '/upload': (context) => Upload(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
