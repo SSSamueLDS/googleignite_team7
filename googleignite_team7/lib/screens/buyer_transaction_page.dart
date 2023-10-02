@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 
 class CheckoutPage extends StatelessWidget {
@@ -14,7 +15,12 @@ class CheckoutPage extends StatelessWidget {
             CreditCardForm(), 
             _SimpleCheckBox(),
             _SaveCard(),
-            _ToOrderReview(),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: MyFilledButton(label: "Continue to Order Review", onPressed: (() {
+                Navigator.pushNamed(context, "/buyer_review");
+              }) , fillColor: Colors.black, borderColor: Colors.transparent, fontColor: Colors.white),
+            )
           ],
         ),
       ),
@@ -289,7 +295,7 @@ class _SaveCardState extends State<_SaveCard> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 10,
+                      fontSize: 12,
                       fontFamily: 'DM Sans',
                       fontWeight: FontWeight.w400,
                       height: 0,
@@ -303,10 +309,10 @@ class _SaveCardState extends State<_SaveCard> {
           Center(
             child: Text(
               'You will not be charged until you have reviewed and placed your order in the next step',
-              textAlign: TextAlign.start,
+              textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 10,
+                fontSize: 12,
                 fontFamily: 'DM Sans',
                 fontWeight: FontWeight.w400,
                 height: 0,

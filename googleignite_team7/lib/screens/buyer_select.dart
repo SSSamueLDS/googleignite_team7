@@ -439,19 +439,24 @@ class HorizontalScrollExample extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          Container(
-                            height: 100, // Adjust the height as needed
-                            width:
-                                double.infinity, // Adjust the width as needed
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(16.0),
-                              child: Image.asset(
-                                'assets/images/redbellpepper.png', // Replace with your image path
-                                fit: BoxFit.contain,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/productdetail');
+                            },
+                            child: Container(
+                              height: 100, // Adjust the height as needed
+                              width:
+                                  double.infinity, // Adjust the width as needed
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                color: const Color.fromRGBO(240, 240, 240, 1),
+                              ),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(16.0),
+                                child: Image.asset(
+                                  'assets/images/redbellpepper.png', // Replace with your image path
+                                  fit: BoxFit.contain,
+                                ),
                               ),
                             ),
                           ),
