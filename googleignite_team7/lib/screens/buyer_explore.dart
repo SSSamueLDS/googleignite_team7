@@ -1,4 +1,150 @@
+// ignore_for_file: override_on_non_overriding_member
+
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/screens/buyer_explore.dart';
+import 'package:googleignite_team7/widgets/MyFilledButton.dart';
+
+class BuyerLanding extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Stack(children: [
+          Container(
+            constraints: const BoxConstraints.expand(),
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage("assets/images/background.jpg"),
+              fit: BoxFit.cover,
+            )),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [_buildLogo(context), 
+            Expanded(child: 
+            Stack(children: [
+              
+              Expanded(child: BuyerExplore(),)
+
+            ],)
+            )],
+          ),
+        ]),
+      ),
+    );
+  }
+}
+
+  @override
+  Widget _buildLogo(BuildContext context) {
+    return Container(
+      height: 100,
+      margin: const EdgeInsets.only(top: 5),
+      child: Image.asset(
+        'assets/images/logo_without_text.png',
+      ),
+    );
+  }
+
+  
+
+class SearchResults extends StatefulWidget {
+  @override
+  _SearchResultsState createState() => _SearchResultsState();
+}
+
+class _SearchResultsState extends State<SearchResults> {
+  bool filteredDataVisible = false;
+
+  List<String> data = [
+    'Apple',
+    'Banana',
+    'Cherry',
+    'Date',
+    'Grapes',
+    'Lemon',
+    'Orange',
+    'Peach',
+    'Pear',
+    'Plum',
+  ];
+
+  List<String> filteredData = [];
+
+  @override
+  void initState() {
+    super.initState();
+    
+    
+  }
+
+  void filterSearchResults(String query) {
+    List<String> dummySearchList = <String>[];
+    dummySearchList.addAll(data);
+    if (query.isNotEmpty) {
+      filteredData.addAll(data);
+      List<String> dummyListData = <String>[];
+      dummySearchList.forEach((item) {
+        if (item.toLowerCase().contains(query.toLowerCase())) {
+          dummyListData.add(item);
+        }
+      });
+      setState(() {
+        filteredData.clear();
+        filteredData.addAll(dummyListData);
+      });
+      return;
+    } else {
+      setState(() {
+        filteredData.clear();
+        filteredData.addAll(data);
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      margin: EdgeInsets.all(5),
+      child: SingleChildScrollView(
+        padding: EdgeInsets.all(5.0),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: TextField(
+            onChanged: (value) {
+              filterSearchResults(value);
+            },
+            decoration: InputDecoration(
+              prefixIcon: Icon(Icons.search),
+              hintText: 'Search Store',
+            ),
+          ),
+        ),
+        Container(
+          height: 400,
+          child: ListView.builder(
+            itemCount: filteredData.length,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text(filteredData[index]),
+                // You can add more details or customize ListTile as needed
+              );
+            },
+          ),
+        ),
+      ],
+    ),
+      ),
+    );
+  }
+}
+
 
 class BuyerExplore extends StatefulWidget {
   @override
@@ -13,44 +159,14 @@ class _BuyerExplore extends State<BuyerExplore> {
     return Scaffold(
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Stack(
-              children: [
-                Container(
-                  constraints: const BoxConstraints.expand(),
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/images/background.jpg"),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 30),
-                      Image.asset(
-                        'assets/images/logo_without_text.png',
-                      ),
-                      FloatingActionButton.small(
-                        onPressed: () {},
-                        backgroundColor: Color.fromRGBO(0, 107, 60, 1),
-                        child: const Icon(Icons.add),
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+          Expanded(child: SearchResults(),),
+
           Expanded(
             flex: 3,
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(5.0),
               child: HorizontalScrollExample(
-                horizontalHeaderText: 'Category',
+               
                 verticalHeaderText: 'All Listings',
               ),
             ),
@@ -91,11 +207,10 @@ class _BuyerExplore extends State<BuyerExplore> {
 }
 
 class HorizontalScrollExample extends StatelessWidget {
-  final String horizontalHeaderText;
   final String verticalHeaderText;
 
   HorizontalScrollExample({
-    required this.horizontalHeaderText,
+  
     required this.verticalHeaderText,
   });
 
@@ -104,143 +219,13 @@ class HorizontalScrollExample extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            horizontalHeaderText,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-        ),
-        Container(
-          height: 150, // Adjust the height as needed
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: const Color.fromRGBO(240, 240, 240, 1),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/rice.png', // Replace with your image path
-                        height: 60, // Adjust the image height as needed
-                        width: 60, // Adjust the image width as needed
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Rice',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: const Color.fromRGBO(240, 240, 240, 1),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/millet.png', // Replace with your image path
-                        height: 60, // Adjust the image height as needed
-                        width: 60, // Adjust the image width as needed
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Millet',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: const Color.fromRGBO(240, 240, 240, 1),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/pulses.png', // Replace with your image path
-                        height: 60, // Adjust the image height as needed
-                        width: 60, // Adjust the image width as needed
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Pulses',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.0),
-                    color: const Color.fromRGBO(240, 240, 240, 1),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/images/sugarcane.png', // Replace with your image path
-                        height: 60, // Adjust the image height as needed
-                        width: 60, // Adjust the image width as needed
-                      ),
-                      const SizedBox(height: 8),
-                      const Text(
-                        'Sugarcane',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16.0),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              // Add more items as needed
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            verticalHeaderText,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-        ),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(5.0),
             child: Container(
-              height: 200,
+              height: 150,
               child: GridView(
-                  padding: const EdgeInsets.all(8.0), // Add padding here
+                  padding: const EdgeInsets.all(5.0), // Add padding here
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 8.0,
@@ -248,7 +233,7 @@ class HorizontalScrollExample extends StatelessWidget {
                   ),
                   children: [
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.orange,
@@ -256,7 +241,7 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 100, // Adjust the height as needed
+                            height: 150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -264,7 +249,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/basmati_white.jpg', // Replace with your image path
+                              'assets/images/exploreimg1.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -272,25 +257,17 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Basmati Rice',
+                              'Fresh Fruit and Vegetables',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '1000kg available',
-                              style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Color.fromRGBO(151, 152, 159, 1)),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.orange,
@@ -298,7 +275,7 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 100, // Adjust the height as needed
+                            height: 150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -306,7 +283,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/brown_rice.png', // Replace with your image path
+                              'assets/images/exploreimg2.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -314,25 +291,17 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Brown Rice',
+                              'Cooking Oil & Ghee',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '1000kg available',
-                              style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Color.fromRGBO(151, 152, 159, 1)),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.orange,
@@ -340,7 +309,7 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 100, // Adjust the height as needed
+                            height: 150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -348,7 +317,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/jasmine_white_rice.jpg', // Replace with your image path
+                              'assets/images/exploreimg3.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -356,25 +325,17 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Jasmine White Rice',
+                              'Meat & Fish',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '1000kg available',
-                              style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Color.fromRGBO(151, 152, 159, 1)),
-                            ),
-                          ),
+                         
                         ],
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.orange,
@@ -382,7 +343,7 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 100, // Adjust the height as needed
+                            height: 150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -390,7 +351,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/pearl_millet.jpg', // Replace with your image path
+                              'assets/images/exploreimg4.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -398,25 +359,17 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Organic Pearl Millet',
+                              'Bakery & Snacks',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                           ),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '1000kg available',
-                              style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Color.fromRGBO(151, 152, 159, 1)),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.orange,
@@ -424,7 +377,7 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 100, // Adjust the height as needed
+                            height: 150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -432,7 +385,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/lentils.png', // Replace with your image path
+                              'assets/images/exploreimg5.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -440,25 +393,17 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Lentils',
+                              'Dairy & Eggs',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '500kg available',
-                              style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Color.fromRGBO(151, 152, 159, 1)),
-                            ),
-                          ),
+                        
                         ],
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(5.0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.0),
                         // color: Colors.orange,
@@ -466,7 +411,7 @@ class HorizontalScrollExample extends StatelessWidget {
                       child: Column(
                         children: [
                           Container(
-                            height: 100, // Adjust the height as needed
+                            height:150, // Adjust the height as needed
                             width:
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
@@ -474,7 +419,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/ground_peanuts.png', // Replace with your image path
+                              'assets/images/exploreimg6.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -482,27 +427,19 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Ground Peanuts',
+                              'Beverages',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 16.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '1000kg available',
-                              style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: Color.fromRGBO(151, 152, 159, 1)),
-                            ),
-                          ),
+                          
                         ],
                       ),
                     ),
                   ]),
             ),
           ),
-        ),
+        )
       ],
     );
   }
