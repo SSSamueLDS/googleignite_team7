@@ -1,8 +1,85 @@
 import 'package:flutter/material.dart';
 
+<<<<<<< Updated upstream
 class BuyerExplore extends StatefulWidget {
   @override
   _BuyerExplore createState() => _BuyerExplore();
+=======
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('Debugging'),
+      ),
+      body: BuyerExploreBuild(),
+    ),
+  ));
+}
+
+class BuyerExploreBuild extends StatelessWidget {
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Stack(children: [
+          Container(
+            constraints: const BoxConstraints.expand(),
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage("assets/images/background.jpg"),
+              fit: BoxFit.cover,
+            )),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 40),
+              _buildLogo(context),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: TextField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: 'Search...',
+                    suffixIcon: IconButton(
+                      icon: Icon(Icons.clear),
+                      onPressed: () => _searchController.clear(),
+                    ),
+                    prefixIcon: IconButton(
+                      icon: Icon(Icons.search),
+                      onPressed: () {
+                        // Perform the search here
+                      },
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      borderSide: const BorderSide(
+                        color: Colors.green, // Replace Colors.blue with your desired color
+                        width: 2.0, // You can adjust the width of the border
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Stack(
+                  children: [
+                    Expanded(
+                      child: BuyerExplores(),
+                    )
+                  ],
+              ))
+            ],
+          ),
+        ]),
+      ),
+    );
+  }
+>>>>>>> Stashed changes
 }
 
 class _BuyerExplore extends State<BuyerExplore> {
@@ -13,6 +90,7 @@ class _BuyerExplore extends State<BuyerExplore> {
     return Scaffold(
       body: Column(
         children: [
+<<<<<<< Updated upstream
           Expanded(
             flex: 1,
             child: Stack(
@@ -45,6 +123,11 @@ class _BuyerExplore extends State<BuyerExplore> {
               ],
             ),
           ),
+=======
+          // Expanded(
+          //   child: SearchResults(),
+          // ),
+>>>>>>> Stashed changes
           Expanded(
             flex: 3,
             child: Padding(
@@ -261,10 +344,128 @@ class HorizontalScrollExample extends StatelessWidget {
                                 double.infinity, // Adjust the width as needed
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
+<<<<<<< Updated upstream
                               'assets/images/basmati_white.jpg', // Replace with your image path
+=======
+                              'assets/images/exploreimg1.png', // Replace with your image path
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150, // Adjust the height as needed
+                            width:
+                                double.infinity, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              'assets/images/exploreimg2.png', // Replace with your image path
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150, // Adjust the height as needed
+                            width:
+                                double.infinity, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              'assets/images/exploreimg3.png', // Replace with your image path
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150, // Adjust the height as needed
+                            width:
+                                double.infinity, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              'assets/images/exploreimg5.png', // Replace with your image path
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150, // Adjust the height as needed
+                            width:
+                                double.infinity, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              'assets/images/exploreimg4.png', // Replace with your image path
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        // color: Colors.orange,
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150, // Adjust the height as needed
+                            width:
+                                double.infinity, // Adjust the width as needed
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                            child: Image.asset(
+                              'assets/images/exploreimg6.png', // Replace with your image path
+>>>>>>> Stashed changes
                               fit: BoxFit.contain,
                             ),
                           ),
