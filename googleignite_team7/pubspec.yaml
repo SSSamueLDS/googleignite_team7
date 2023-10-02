@@ -66,34 +66,27 @@ flutter:
     - assets/images/background.jpg
     - assets/images/logo.png
     - assets/images/logo_without_text.png
-    - assets/images/cover(1).jpg
-    - assets/images/cover.jpg
-    - assets/images/cake 1 (1).png
+    - assets/images/small_banner.jpg
+    - assets/images/rice.png
+    - assets/images/millet.png
+    - assets/images/pulses.png
+    - assets/images/sugarcane.png
+    - assets/images/basmati_white.jpg
+    - assets/images/brown_rice.png
+    - assets/images/jasmine_white_rice.jpg
+    - assets/images/pearl_millet.jpg
+    - assets/images/lentils.png
+    - assets/images/ground_peanuts.png
+
     - assets/images/Home.jpg
     - assets/images/VectorLisiting.png
     - assets/images/Group.png
-    - assets/images/rice (1).png
-    - assets/images/cake 1 (1).png
-    - assets/images/burger 1 (1).png
-    - assets/images/sushi caviar 1 (1).png
     - assets/images/findmepls.png
-    - assets/images/cover (2).jpg
-    - assets/images/brown rice.jpg
-    - assets/images/cover (3).jpg
-    - assets/images/brown rice.jpg
-    - assets/images/image 4.png
     - assets/images/searchbutton.png
     - assets/images/cross.png
     - assets/images/Account.jpg
     - assets/images/recent.png
     - assets/images/x.png
-
-
-
-
-
-
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -106,12 +99,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: DM Sans
+      fonts:
+        - asset: assets/fonts/DMSans.ttf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

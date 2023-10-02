@@ -171,7 +171,7 @@ class _MyFormState extends State<MyForm> {
                   if (_phonenumber == "97663055" && _password == "password") {
                     Navigator.pushNamed(context, '/buyer_landing');
                   } else {
-                    Navigator.pushNamed(context, '/farmerlisting');
+                    Navigator.pushNamed(context, '/farmer_landing');
                   }
                 }
               },
