@@ -103,6 +103,8 @@ flutter:
     - assets/images/apple_red.png
     - assets/images/grapes.png
 
+    - assets/images/rating.png
+    - assets/images/redpepperbig.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
