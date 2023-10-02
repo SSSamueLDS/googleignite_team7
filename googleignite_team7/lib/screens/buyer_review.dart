@@ -171,7 +171,7 @@ Widget buildBottom(BuildContext context) {
           label: "Pay Now",
           onPressed: () {
             // Implement checkout logic here
-            Navigator.pushNamed(context, '');
+            Navigator.pushNamed(context, '/payment_successful');
           },
           fillColor: Colors.black,
           fontColor: Colors.white,

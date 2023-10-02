@@ -343,8 +343,8 @@ class _ToOrderReview extends StatelessWidget {
           height: 54,
           child: TextButton(
             onPressed: () {
-              print("Button pressed");
-              Navigator.pushNamed(context, '/404');
+              // print("Button pressed");
+              Navigator.pushNamed(context, '/buyer_review');
             },
             child: const Text(
               'Continue to Order Review',

@@ -221,7 +221,7 @@ class _BuyerCartState extends State<BuyerCart> {
             label: "Checkout",
             onPressed: () {
               // Implement checkout logic here
-              Navigator.pushNamed(context, '/buyer_review');
+              Navigator.pushNamed(context, '/buyer_transaction_page');
             },
             fillColor: Colors.black,
             fontColor: Colors.white,

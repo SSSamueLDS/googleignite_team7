@@ -33,17 +33,22 @@ class payment_successful extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Order Successful',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 24,
-                fontFamily: 'DM Sans',
-                fontWeight: FontWeight.w700,
-                height: 1.5,
+            
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                'Order Successful',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24,
+                  fontFamily: 'DM Sans',
+                  fontWeight: FontWeight.w700,
+                  height: 1.5,
+                ),
               ),
             ),
-            SizedBox(width: 48),
+            // SizedBox(width: 48),
           ],
         ),
       ),
@@ -138,7 +143,7 @@ class payment_successful extends StatelessWidget {
             height: 54,
             child: TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/buyer_transaction_page');
+                Navigator.pushNamed(context, '/buyer_explore');
               },
               child: const Text(
                 'Done',
