@@ -183,51 +183,53 @@ class _BuyerExplore extends State<BuyerExplore> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/buyer_landing');
-              break;
-            case 1:
-              Navigator.pushNamed(context, '');
-              break;
-            case 2:
-              Navigator.pushNamed(context, '/buyer_cart');
-              break;
-            case 3:
-              break;
-            case 4:
-              Navigator.pushNamed(context, '/buyer_account');
-              break;
-          }
-        },
-        elevation: 8.0, // Add elevation here
-        selectedItemColor:
-            Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
-        unselectedItemColor: Colors.grey, // Set the unselected tab text color
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.view_module),
-            label: 'Listings',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.local_shipping),
-            label: 'Orders',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      type: BottomNavigationBarType.fixed,
+      currentIndex: _currentIndex,
+      onTap: (index) {
+        setState(() {
+          _currentIndex = index;
+        });
+        // for changing of pages
+        switch (index) {
+          case 0:
+            Navigator.pushNamed(context, '/buyer_landing');
+            break;
+          case 1:
+            Navigator.pushNamed(context, '');
+            break;
+          case 2:
+            Navigator.pushNamed(context, '/buyer_cart');
+            break;
+          case 3:
+            break;
+          case 4:
+            Navigator.pushNamed(context, '/buyer_account');
+            break;
+        }
+      },
+      elevation: 8.0,
+      selectedItemColor: Color.fromRGBO(0, 107, 60, 1),
+      unselectedItemColor: Colors.grey,
+      items: const [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_bag),
+          label: 'Shop',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.view_module),
+          label: 'Explore',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.shopping_cart),
+          label: 'Cart',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.favorite),
+          label: 'Favourite',
+        ),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account")
+      ],
+    ),
     );
   }
 }
