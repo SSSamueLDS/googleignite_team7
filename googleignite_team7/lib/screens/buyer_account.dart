@@ -65,10 +65,10 @@ class _BuyerAccountState extends State<BuyerAccount> {
           // for changing of pages
           switch (index) {
             case 0:
-              Navigator.pushNamed(context, '/buyer_landing');
+              Navigator.pushNamed(context, '/buyer_explore');
               break;
             case 1:
-              Navigator.pushNamed(context, '/buyer_explore');
+              Navigator.pushNamed(context, '/buyer_select');
               break;
             case 2:
               Navigator.pushNamed(context, '/buyer_cart');

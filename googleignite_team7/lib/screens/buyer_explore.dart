@@ -162,7 +162,7 @@ class BuyerExplores extends StatefulWidget {
 }
 
 class _BuyerExplores extends State<BuyerExplores> {
-  int _currentIndex = 1;
+  int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -193,10 +193,10 @@ class _BuyerExplores extends State<BuyerExplores> {
           // for changing of pages
           switch (index) {
             case 0:
-              Navigator.pushNamed(context, '/buyer_landing');
+              Navigator.pushNamed(context, '/buyer_explore');
               break;
             case 1:
-              Navigator.pushNamed(context, '/buyer_explore');
+              Navigator.pushNamed(context, '/buyer_select');
               break;
             case 2:
               Navigator.pushNamed(context, '/buyer_cart');

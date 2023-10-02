@@ -145,7 +145,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/buyer_cart');
+                Navigator.pushNamed(context, '/register_or_login');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
