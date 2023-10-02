@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:googleignite_team7/screens/farmeraccount.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 // Import your custom widget
@@ -15,6 +16,7 @@ import '../screens/buyer_landing.dart';
 
 // Farmer Pages
 import '../screens/farmer_landing.dart';
+import '../screens/farmeraccount.dart';
 import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
@@ -52,6 +54,7 @@ class MyApp extends StatelessWidget {
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
         '/404' : (context) => UnderConstruction(),
         '/upload': (context) => Upload(),
+        '/farmer_account': (context) => FarmerAccount(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
