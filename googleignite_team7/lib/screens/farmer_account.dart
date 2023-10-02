@@ -64,10 +64,10 @@ class _FarmerAccountState extends State<FarmerAccount> {
           });
           switch (index) {
             case 0:
-              Navigator.pushNamed(context, '/farmerlisting');
+              Navigator.pushNamed(context, '/farmer_landing');
               break;
             case 1:
-              Navigator.pushNamed(context, '/farmerorders');
+              Navigator.pushNamed(context, '/farmer_orders');
               break;
             case 2:
               Navigator.pushNamed(context, '/farmer_account');

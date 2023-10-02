@@ -19,7 +19,7 @@ import '../screens/buyer_account.dart';
 import '../screens/buyer_select.dart';
 
 import '../screens/buyer_transaction_page.dart';
-
+import '../screens/farmers_orders_page.dart';
 // Farmer Pages
 import '../screens/farmer_landing.dart';
 import '../screens/farmer_account.dart';
@@ -77,6 +77,7 @@ class MyApp extends StatelessWidget {
         '/payment_successful': (context) => payment_successful(),
         '/buyer_review': (context) => BuyerReview(),
         '/buyer_transaction_page': (context) => CheckoutPage(),
+        '/farmer_orders': (context) => FarmerOrders(),
         // '/buyer_explore': (context) => BuyerExplore(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.

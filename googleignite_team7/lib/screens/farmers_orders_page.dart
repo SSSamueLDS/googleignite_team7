@@ -219,7 +219,7 @@ class _BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<_BottomNav> {
-  int _currentIndex = 0;
+  int _currentIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -232,7 +232,7 @@ class _BottomNavState extends State<_BottomNav> {
         });
         switch (index) {
             case 0:
-              Navigator.pushNamed(context, '/farmerlisting');
+              Navigator.pushNamed(context, '/farmer_landing');
               break;
             case 1:
               Navigator.pushNamed(context, '/farmerorders');

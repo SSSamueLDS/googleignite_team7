@@ -1,15 +1,5 @@
 import 'package:flutter/material.dart';
-void main() {
-  runApp(MaterialApp(
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text('Debugging'),
-      ),
-      body: FarmerLanding(),
-    ),
-  ));
-}
-  
+import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 class SearchResults extends StatefulWidget {
   @override
@@ -138,7 +128,7 @@ class _FarmerLandingState extends State<FarmerLanding> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(height: 20),
+                      SizedBox(height: 40),
                       Image.asset(
                         'assets/images/logo_without_text.png',
                       ),
@@ -181,10 +171,10 @@ class _FarmerLandingState extends State<FarmerLanding> {
           });
           switch (index) {
             case 0:
-              Navigator.pushNamed(context, '/farmerlisting');
+              Navigator.pushNamed(context, '/farmer_landing');
               break;
             case 1:
-              Navigator.pushNamed(context, '/farmerorders');
+              Navigator.pushNamed(context, '/farmer_orders');
               break;
             case 2:
               Navigator.pushNamed(context, '/farmer_account');
