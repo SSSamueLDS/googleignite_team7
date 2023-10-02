@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/screens/farmeraccount.dart';
+import 'package:googleignite_team7/screens/productdetail.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
 // Import your custom widget
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
         '/404' : (context) => UnderConstruction(),
         '/farmer_account': (context) => FarmerAccount(),
         '/buyer_account': (context) => BuyerAccount(),
+        '/productdetail': (context) => ProductDetail(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );

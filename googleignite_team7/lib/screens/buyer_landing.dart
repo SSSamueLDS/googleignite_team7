@@ -270,7 +270,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             child: Text(
                               'Fresh Fruit and Vegetables',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                                  fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
                           
@@ -304,7 +304,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             child: Text(
                               'Cooking Oil & Ghee',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                                  fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
                           
@@ -338,7 +338,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             child: Text(
                               'Meat & Fish',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                                  fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
                          
@@ -372,7 +372,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             child: Text(
                               'Bakery & Snacks',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             ),
                           ),
                           
@@ -406,7 +406,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             child: Text(
                               'Dairy & Eggs',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                                  fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
                         
@@ -440,7 +440,7 @@ class HorizontalScrollExample extends StatelessWidget {
                             child: Text(
                               'Beverages',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                                  fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
                           

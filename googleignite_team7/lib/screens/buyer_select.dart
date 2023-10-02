@@ -329,6 +329,10 @@ class HorizontalScrollExample extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
+              //             InkWell(
+              //               onTap: () {
+              //   Navigator.pushNamed(context, '/productdetail');
+              // }),
                           Container(
                             height: 150, // Adjust the height as needed
                             width:
@@ -338,7 +342,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg1.png', // Replace with your image path
+                              'assets/images/apple.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -346,7 +350,7 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Fresh Fruit and Vegetables',
+                              'Apple',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
