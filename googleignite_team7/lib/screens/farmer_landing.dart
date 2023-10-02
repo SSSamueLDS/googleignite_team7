@@ -65,7 +65,8 @@ class _FarmerLandingState extends State<FarmerLanding> {
           });
         },
         elevation: 8.0, // Add elevation here
-        selectedItemColor: Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
+        selectedItemColor:
+          Color.fromRGBO(0, 107, 60, 1), // Set the selected tab text color
         unselectedItemColor: Colors.grey, // Set the unselected tab text color
         items: const [
           BottomNavigationBarItem(
