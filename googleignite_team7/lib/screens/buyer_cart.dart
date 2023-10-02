@@ -140,8 +140,6 @@ class _BuyerCartState extends State<BuyerCart> {
       );
 
   Widget buildBottom(BuildContext context) {
-    // Add a GlobalKey to the ListView.builder widget
-
     return Stack(
       children: [
         Container(
@@ -223,6 +221,7 @@ class _BuyerCartState extends State<BuyerCart> {
             label: "Checkout",
             onPressed: () {
               // Implement checkout logic here
+              Navigator.pushNamed(context, '/buyer_review');
             },
             fillColor: Colors.black,
             fontColor: Colors.white,
