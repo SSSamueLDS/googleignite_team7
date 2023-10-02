@@ -62,6 +62,17 @@ class _FarmerAccountState extends State<FarmerAccount> {
           setState(() {
             _currentIndex = index;
           });
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/farmerlisting');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/farmerorders');
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/farmer_account');
+              break;    
+          }
         },
         elevation: 8.0, // Add elevation here
         selectedItemColor:

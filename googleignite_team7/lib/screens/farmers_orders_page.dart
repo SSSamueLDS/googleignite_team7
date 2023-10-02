@@ -230,6 +230,17 @@ class _BottomNavState extends State<_BottomNav> {
         setState(() {
           _currentIndex = index;
         });
+        switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/farmerlisting');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/farmerorders');
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/farmer_account');
+              break;    
+          }
       },
       elevation: 8.0,
       selectedItemColor: Color.fromRGBO(0, 107, 60, 1),
