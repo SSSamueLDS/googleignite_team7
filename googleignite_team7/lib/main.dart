@@ -147,11 +147,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-<<<<<<< HEAD
-                Navigator.pushNamed(context, '/farmerlisting');
-=======
-                Navigator.pushNamed(context, '/registerorlogin');
->>>>>>> 317a5b77f02e5c183a8f7b588ba192e1ba51a532
+                Navigator.pushNamed(context, '/register_or_login');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
