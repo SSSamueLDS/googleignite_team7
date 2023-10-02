@@ -18,6 +18,7 @@ import '../screens/farmerlisting.dart';
 import '../screens/farmersearchlisting.dart';
 import '../screens/farmertypesearchlisting.dart';
 
+import "../screens/upload.dart";
 
 void main() {
   final account = jsonEncode({'username': 'kohp', 'password': 'password'});
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         '/farmersearchlisting': (context) => Farmersearchlisting(),
         '/farmertypesearchlisting': (context) => Farmertypesearchlisting(),
         
+        '/upload': (context) => Upload(),
       },
       // home: MainScreen(), // Set the main screen as the initial route.
     );
@@ -122,7 +124,7 @@ Widget _buildSecondContainer(BuildContext context) {
             child: MyFilledButton(
               label: "Get Started",
               onPressed: () {
-                Navigator.pushNamed(context, '/register_or_login');
+                Navigator.pushNamed(context, '/upload');
               },
               fillColor: Colors.black,
               borderColor: Colors.transparent,
