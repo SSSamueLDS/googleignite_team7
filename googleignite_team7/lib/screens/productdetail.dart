@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ResponsiveRectangle extends StatelessWidget {
+class ProductDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -193,9 +193,9 @@ void main() {
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text('Responsive Rectangle'),
+        title: Text('Debugging'),
       ),
-      body: ResponsiveRectangle(),
+      body: ProductDetail(),
     ),
   ));
 }

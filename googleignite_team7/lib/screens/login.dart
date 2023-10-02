@@ -182,7 +182,7 @@ class _MyFormState extends State<MyForm> {
                   // If the form is valid, display a snackbar. In the real world,
                   // you'd often call a server or save the information in a database.
                   if (_email=="buyer@gmail.com" && _password == "buyer") {
-                    Navigator.pushNamed(context, '/buyer_landing');
+                    Navigator.pushNamed(context, '/buyer_explore');
                   } else {
                     Navigator.pushNamed(context, '/payment_successful');
                   }

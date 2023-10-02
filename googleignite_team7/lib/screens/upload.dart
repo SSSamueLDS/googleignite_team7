@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:googleignite_team7/widgets/MyFilledButton.dart';
 
-class Upload extends StatelessWidget {
+class UploadProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

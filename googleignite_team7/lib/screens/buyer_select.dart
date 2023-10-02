@@ -10,12 +10,12 @@ void main() {
       appBar: AppBar(
         title: Text('Debugging'),
       ),
-      body: BuyerLanding(),
+      body: BuyerSelect(),
     ),
   ));
 }
 
-class BuyerLanding extends StatelessWidget {
+class BuyerSelect extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class BuyerLanding extends StatelessWidget {
                   child: Stack(
                 children: [
                   Expanded(
-                    child: BuyerLand(),
+                    child: BuyerExplore(),
                   )
                 ],
               ))
@@ -137,7 +137,8 @@ class _SearchResultsState extends State<SearchResults> {
               ),
             ),
             Container(
-              height: 40,
+              height: 50,
+              width: 250,
               child: ListView.builder(
                 itemCount: filteredData.length,
                 itemBuilder: (BuildContext context, int index) {
@@ -155,13 +156,13 @@ class _SearchResultsState extends State<SearchResults> {
   }
 }
 
-class BuyerLand extends StatefulWidget {
+class BuyerExplore extends StatefulWidget {
   @override
-  _BuyerLand createState() => _BuyerLand();
+  _BuyerExplore createState() => _BuyerExplore();
 }
 
-class _BuyerLand extends State<BuyerLand> {
-  int _currentIndex = 0;
+class _BuyerExplore extends State<BuyerExplore> {
+  int _currentIndex = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -183,53 +184,53 @@ class _BuyerLand extends State<BuyerLand> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      currentIndex: _currentIndex,
-      onTap: (index) {
-        setState(() {
-          _currentIndex = index;
-        });
-        // for changing of pages
-        switch (index) {
-          case 0:
-            Navigator.pushNamed(context, '/buyer_landing');
-            break;
-          case 1:
-            Navigator.pushNamed(context, '/buyer_explore');
-            break;
-          case 2:
-            Navigator.pushNamed(context, '/buyer_cart');
-            break;
-          case 3:
-            break;
-          case 4:
-            Navigator.pushNamed(context, '/buyer_account');
-            break;
-        }
-      },
-      elevation: 8.0,
-      selectedItemColor: Color.fromRGBO(0, 107, 60, 1),
-      unselectedItemColor: Colors.grey,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_bag),
-          label: 'Shop',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.view_module),
-          label: 'Explore',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
-          label: 'Cart',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'Favourite',
-        ),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account")
-      ],
-    ),
+        type: BottomNavigationBarType.fixed,
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+          // for changing of pages
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/buyer_explore');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/buyer_select');
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/buyer_cart');
+              break;
+            case 3:
+              break;
+            case 4:
+              Navigator.pushNamed(context, '/buyer_account');
+              break;
+          }
+        },
+        elevation: 8.0,
+        selectedItemColor: Color.fromRGBO(0, 107, 60, 1),
+        unselectedItemColor: Colors.grey,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag),
+            label: 'Shop',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.view_module),
+            label: 'Explore',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Favourite',
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account")
+        ],
+      ),
     );
   }
 }
@@ -246,28 +247,105 @@ class HorizontalScrollExample extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Container(
+        Container(
           height: 150, // Adjust the height as needed
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              Container(
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/images/banner.png', // Replace with your image path
+                        'assets/images/exploreimg1.png', // Replace with your image path
                         height: 120, // Adjust the image height as needed
-                        width: 240, // Adjust the image width as needed
+                        width: 120, // Adjust the image width as needed
                       ),
-                     
                     ],
                   ),
                 ),
-              
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg2.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg3.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                    color: const Color.fromRGBO(240, 240, 240, 1),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/exploreimg4.png', // Replace with your image path
+                        height: 120, // Adjust the image height as needed
+                        width: 120, // Adjust the image width as needed
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              // Add more items as needed
             ],
           ),
-         ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            verticalHeaderText,
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+        ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.all(5.0),
@@ -289,6 +367,10 @@ class HorizontalScrollExample extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
+                          //             InkWell(
+                          //               onTap: () {
+                          //   Navigator.pushNamed(context, '/productdetail');
+                          // }),
                           Container(
                             height: 150, // Adjust the height as needed
                             width:
@@ -298,7 +380,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg1.png', // Replace with your image path
+                              'assets/images/apple.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -306,9 +388,9 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Fresh Fruit and Vegetables',
+                              'Apple',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
                         ],
@@ -331,7 +413,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg2.png', // Replace with your image path
+                              'assets/images/banana.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -339,9 +421,9 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Cooking Oil & Ghee',
+                              'Banana',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
                         ],
@@ -364,7 +446,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg3.png', // Replace with your image path
+                              'assets/images/redbellpepper.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -372,9 +454,9 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Meat & Fish',
+                              'Red Bell Pepper',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
                             ),
                           ),
                         ],
@@ -397,7 +479,7 @@ class HorizontalScrollExample extends StatelessWidget {
                               color: const Color.fromRGBO(240, 240, 240, 1),
                             ),
                             child: Image.asset(
-                              'assets/images/exploreimg4.png', // Replace with your image path
+                              'assets/images/ginger.png', // Replace with your image path
                               fit: BoxFit.contain,
                             ),
                           ),
@@ -405,75 +487,9 @@ class HorizontalScrollExample extends StatelessWidget {
                           const Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              'Bakery & Snacks',
+                              'ginger',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        // color: Colors.orange,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150, // Adjust the height as needed
-                            width:
-                                double.infinity, // Adjust the width as needed
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
-                            ),
-                            child: Image.asset(
-                              'assets/images/exploreimg5.png', // Replace with your image path
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Dairy & Eggs',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        // color: Colors.orange,
-                      ),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150, // Adjust the height as needed
-                            width:
-                                double.infinity, // Adjust the width as needed
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              color: const Color.fromRGBO(240, 240, 240, 1),
-                            ),
-                            child: Image.asset(
-                              'assets/images/exploreimg6.png', // Replace with your image path
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          const Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Beverages',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 12.0),
                             ),
                           ),
                         ],

@@ -82,7 +82,7 @@ Widget _buildSecondContainer(BuildContext context) {
               child: MyFilledButton(
                 label: "Go back",
                 onPressed: () {
-                  Navigator.pushNamed(context, '/');
+                  Navigator.of(context).pop();
                   // change this to where ever you need
                 },
                 fillColor: Colors.black,
